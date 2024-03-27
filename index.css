@@ -1,0 +1,981 @@
+:root {
+    --primary-bg: #EBEBEB;
+    --text-primary: #515151;
+    --offwhite: #F8F8F8;
+    --red: #BB4C4C;
+    --blue: #BFE3EB;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url('asset/images/Avenir-Medium.ttf');
+}
+
+* {
+    font-family: Avenir;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+p {
+    margin: 0px;
+}
+
+.main-container {
+    height: 100vh;
+    padding-left: 350px;
+}
+
+.inputs {
+    height: 60px;
+    padding: 30px;
+    border: 1px solid #5151513f;
+    border-radius: 6px;
+}
+
+.inputs:focus {
+    border: 1px solid var(--text-primary);
+    box-shadow: none;
+}
+
+.selects {
+    height: 60px;
+    padding: 15px 0px 20px 30px;
+    border: 1px solid #5151513f;
+}
+
+.selects:focus {
+    border: 1px solid var(--text-primary);
+    box-shadow: none;
+}
+
+.dark {
+    background-color: var(--text-primary) !important;
+    color: white !important;
+}
+
+/* ======================== */
+/* =============  ASIDE CODE ============== */
+aside {
+    width: 350px;
+    background-color: var(--primary-bg);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    padding: 25px 0px 0px 0px;
+}
+
+.site-logo {
+    padding: 10px 0px 50px 40px;
+}
+
+.menu-link {
+    font-family: Avenir;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24.59px;
+    text-align: left;
+    color: var(--text-primary);
+}
+
+.menu-item {
+    column-gap: 20px;
+    transition: all .3s;
+    padding: 20px 0px 20px 40px;
+}
+
+.menu-ul {
+    padding: 0px;
+    padding-top: 20px;
+}
+
+.menu-item:hover {
+    background: linear-gradient(90deg, #BFE3EB 0%, rgba(191, 227, 235, 0) 100%);
+}
+
+.active {
+    background: linear-gradient(90deg, #BFE3EB 0%, rgba(191, 227, 235, 0) 100%);
+}
+
+
+/* ============================ */
+/* ================= ASIDE CODE END ============================= */
+.header {
+    height: 6rem;
+    background-color: var(--text-primary);
+    padding: 20px 50px;
+}
+
+.site-name h3 {
+    color: white;
+    font-family: Avenir;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32.78px;
+    text-align: left;
+}
+
+.admin-info p {
+    font-family: Avenir;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.86px;
+    text-align: left;
+    color: white;
+    padding-right: 20px;
+}
+
+.user-img {
+    border-radius: 100px;
+}
+
+/* =============================== */
+/* =============================  END HEADER  ========================= */
+.development-sec {
+    padding: 30px;
+    border: 2px solid #51515136;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.deve-content p {
+    font-family: Avenir;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27.32px;
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+.dev-total p {
+    font-family: Avenir;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.86px;
+    text-align: right;
+}
+
+.dev-total h4 {
+    font-family: Avenir;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 49.18px;
+    text-align: right;
+}
+
+/* ================================ */
+.dev-cards {
+    margin-top: 20px;
+    padding: 0px 30px 30px 30px;
+}
+
+.dev-card-content {
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.dev-card {
+    background-color: var(--offwhite);
+    border: 1px solid #51515111;
+    border-radius: 10px;
+}
+
+.dev-card-content h4 {
+    font-family: Avenir;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27.32px;
+    color: var(--text-primary);
+    margin: 0px;
+}
+
+.dev-card-content p {
+    font-family: Avenir;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.39px;
+    color: var(--text-primary);
+    padding-top: 5px;
+}
+
+.dev-card-end {
+    padding-top: 40px;
+    border-bottom: 1px solid #51515142;
+}
+
+.dev-card-end p {
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.12px;
+}
+
+.dev-card-buttons {
+    column-gap: 8px;
+    padding: 20px 20px;
+}
+
+.dev-card-buttons a {
+    padding: 5px 20px;
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.12px;
+    letter-spacing: 0.02em;
+    border-radius: 6px;
+    text-align: center;
+
+}
+
+.btn-edit {
+    background-color: var(--text-primary);
+    color: white;
+}
+
+.btn-delete {
+    background-color: var(--red);
+    color: white;
+}
+
+.add-dev {
+    padding-top: 100px;
+}
+
+.add-dev a {
+    padding: 10px 20px;
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.12px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    background-color: var(--text-primary);
+    color: white;
+    border-radius: 6px;
+}
+
+/* ============================ */
+/* ============ MODAL ========= */
+/* ============================ */
+/* Styles for modal */
+.modal-sec {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #51515171;
+    border-radius: 0px !important;
+}
+
+/* Modal content */
+.modal-head {
+    background-color: var(--primary-bg);
+    padding: 15px;
+}
+
+.modal-head p {
+    font-family: Avenir;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27.32px;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    border: 1px solid #888;
+    width: 20%;
+    /* border-radius: 10px; */
+}
+
+.modal-cont {
+    padding: 20px 40px;
+}
+
+.modal-cont p {
+    padding: 35px 30px;
+    text-align: center;
+}
+
+.modal-btns button {
+    padding: 8px 50px;
+    border: none;
+    border-radius: 6px;
+}
+
+.modal-btns {
+    column-gap: 10px;
+}
+
+.mb-del {
+    background-color: var(--red);
+    border: 2px solid var(--red) !important;
+    color: white;
+}
+
+.mb-canc {
+    background-color: transparent;
+    border: 2px solid var(--text-primary) !important;
+    color: var(--text-primary);
+}
+
+/* ============================ */
+/* ========= END MODAL ========= */
+/* ============================ */
+
+
+/* ================ Add Appartment ===================== */
+.aprt-form {
+    padding: 50px 0px 50px 60px;
+}
+
+.aprt-form-inp {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+
+.aprt-form-inp input {
+    height: 60px;
+    padding: 20px 30px;
+    width: 100%;
+    font-family: Avenir;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.86px;
+    text-align: left;
+}
+
+.aprt-form-inp label {
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.12px;
+    text-align: left;
+    padding: 20px 0px 5px 0px;
+}
+
+.aprt-form-btns {
+    padding: 30px 0px 0px 0px;
+}
+
+/* .aprt-form-btns button {
+    padding: 8px 30px;
+    border-radius: 6px;
+    border: 1px solid var(--text-primary);
+    background-color: transparent;
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.12px;
+    letter-spacing: 0.02em;
+    text-align: center;
+} */
+
+.aprt-form-btns a {
+    padding: 8px 30px;
+    border-radius: 6px;
+    border: 2px solid var(--text-primary);
+    color: var(--text-primary);
+    background-color: transparent;
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.12px;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.aprt-form-save {
+    column-gap: 10px;
+}
+
+.aprt-form-create button {
+    padding: 11px 30px;
+    border-radius: 6px;
+    border: 1px solid var(--text-primary);
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.12px;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.af-save {
+    background-color: var(--text-primary) !important;
+    color: white !important;
+    font-weight: 400;
+}
+
+.af-file-inp {
+    padding: 86px 0px 0px 10px;
+    width: 80%;
+    position: relative;
+}
+
+.af-pos {
+    position: relative;
+}
+
+.fi-label {
+    position: absolute;
+    top: 26%;
+    right: 27%;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: #ebebeb9f;
+
+}
+
+.file-span {
+    cursor: pointer;
+}
+
+/* =========== TABLE =========== */
+.first {
+    background-color: #515151 !important;
+}
+
+th {
+    background-color: #BFE3EB !important;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+table {
+    width: 100%;
+}
+
+.last-th {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.center-td {
+    border-left: 1px solid #5151512f;
+    border-right: 1px solid #5151512f;
+}
+
+.table-btns {
+    column-gap: 8px;
+}
+
+.table-btns a {
+    padding: 3px 15px;
+    border-radius: 6px;
+}
+
+.table-edit {
+    color: white;
+    background-color: var(--text-primary);
+}
+
+.table-del {
+    background-color: var(--red);
+    color: white;
+}
+
+.aprt-table {
+    margin: 20px 50px 50px 50px;
+    padding-top: 20px;
+    border-top: 1px solid #51515156;
+}
+
+.save-alert {
+    display: none;
+    position: absolute;
+    top: 12%;
+    left: 45%;
+    padding: 5px 140px;
+    border-radius: 100px;
+    background: #B7F1D1;
+    color: var(--text-primary);
+}
+
+/* ============================================================== END ADDING APPARTMENT ========================================================== */
+.apf-container {
+    width: 50%;
+    margin: auto;
+    padding-top: 60px;
+}
+
+.apf-info-div span {
+    font-family: Avenir;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.39px;
+    text-align: left;
+    width: 100%;
+    color: var(--text-primary);
+    border-bottom: 1px solid #51515171;
+    padding: 5px 0px;
+}
+
+.apf-info-div p {
+    font-family: Avenir;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.86px;
+    text-align: left;
+    color: var(--text-primary);
+    padding-top: 5px;
+}
+
+.apf-inp {
+    padding-top: 25px;
+}
+
+.apf-inp input {
+    height: 60px;
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 6px;
+    border: 2px solid var(--text-primary);
+}
+
+.apf-add-spaces {
+    margin-top: 50px;
+}
+
+.apf-space-head {
+    padding: 15px 20px;
+    background-color: var(--primary-bg);
+    border-radius: 6px;
+    margin-top: 50px;
+}
+
+.apf-space-total {
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.12px;
+    text-align: right;
+}
+
+.apf-main-head {
+    padding: 10px 0px 5px 0px;
+    border-bottom: 1px solid #51515152;
+}
+
+.apf-main-head p {
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.12px;
+    color: var(--text-primary);
+}
+
+.apf-bed-sec {
+    margin-top: 20px;
+}
+
+.apf-bed input {
+    width: 100%;
+    height: 60px;
+    padding: 20px 30px;
+    border: 1px solid #5151518f;
+    border-radius: 6px;
+}
+
+.apf-bed-btn {
+    background-color: var(--primary-bg);
+    border-radius: 6px;
+}
+
+.add-another-space {
+    font-family: Avenir;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.39px;
+    text-align: left;
+    padding-top: 30px;
+    cursor: pointer;
+}
+
+.custom-btn {
+    padding: 8px 25px;
+    border-radius: 6px;
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.12px;
+    letter-spacing: 0.02em;
+    border: 2px solid var(--text-primary);
+    text-align: center;
+}
+
+.apf-add-next {
+    background-color: var(--text-primary);
+    color: white;
+}
+
+.bg-light-btn {
+    background-color: transparent;
+    color: black;
+    border: 2px solid var(--text-primary);
+}
+
+.apf-add-space-btn {
+    display: flex;
+    margin-top: 40px;
+    column-gap: 10px;
+    margin-bottom: 100px;
+}
+
+/*========================================================= END APF ADD SOPACES PAGE ===========================================  */
+
+.accordion {
+    row-gap: 8px;
+}
+
+.accordion-body {
+    padding: 20px 0px;
+}
+
+.accordion-item {
+    border: none;
+    border-radius: 0px !important;
+}
+
+.accordion-button {
+    background-color: var(--text-primary);
+    color: white;
+    border-radius: 0px !important;
+}
+
+.accordion-button::after {
+    color: white;
+    background-image: url("asset/images/accordion.png");
+}
+
+.accordion-button:not(.collapse):after {
+    color: white;
+    background-image: url("asset/images/accordion.png");
+}
+
+.accordion-button:not(.cpllapse) {
+    background-color: var(--text-primary);
+    color: white;
+}
+
+/* ================================================================= */
+.choose-fp-inp label {
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.12px;
+    text-align: left;
+}
+
+.choose-head {
+    margin-top: 30px;
+}
+
+.fdeals-inp {
+    padding: 20px 0px;
+    border-bottom: 1px solid #51515150;
+}
+
+.fdeal-curtains {
+    padding: 20px 0px;
+}
+
+.fdeals-colors {
+    padding: 10px 10px;
+    height: 60px;
+    border: 1px solid #5151514f;
+    border-radius: 6px;
+}
+
+.choose-fp-inp label {
+    padding-bottom: 4px;
+}
+
+.fd-color {
+    background-color: var(--primary-bg);
+    margin: 0px 5px;
+    padding: 5px 20px;
+    border-radius: 100px;
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.color-active {
+    background-color: var(--blue);
+}
+
+.add-another-deal {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.add-another-deal p {
+    font-family: Avenir;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.39px;
+    text-align: center;
+    cursor: pointer;
+    color: var(--text-primary);
+}
+
+.apf-last-btns {
+    width: 30%;
+    margin: auto;
+    row-gap: 10px;
+    margin-top: 100px;
+}
+
+.add-another-furn,
+.continue,
+.back {
+    width: 100%;
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.12px;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.add-another-furn {
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.continue {
+    background-color: var(--text-primary);
+    color: white;
+}
+
+.back {
+    color: var(--text-primary);
+}
+
+.apf-inp2 input {
+    border: none;
+    padding: 0px;
+    height: auto;
+    padding-top: 8px;
+}
+
+.apf-inp2 label {
+    border-bottom: 1px solid #51515162;
+    padding-bottom: 4px;
+}
+
+/* ========================================================== END FURNISHING PACK =============================== */
+.motorization-container {
+    width: 72%;
+    margin: auto;
+}
+
+.moto-main-head {
+    border-bottom: none;
+    padding: 20px 5px 0px 0px;
+}
+
+.moto-price-col {
+    padding-left: 30px;
+}
+
+.moto-bed-inp input {
+    background-color: #bfe3eb50;
+    border: none;
+}
+
+.moto-auto-btns {
+    width: 17%;
+    padding-bottom: 100px;
+}
+
+.moto-auto-btns a {
+    padding: 10px 30px;
+}
+
+/* ===================================================== END MOTO SECTION ======================= */
+
+
+
+/* ==================== FURNISHING PAGE START ================================================= */
+.furn-card-buttons {
+    margin: 20px 20px 20px 20px;
+    border-top: 1px solid #51515160;
+    padding: 20px 0px 20px 20px;
+}
+
+.furn-card-content {
+    min-height: 100px;
+}
+
+.add-furn-modal {
+    margin: 100px 100px 100px 480px !important;
+}
+
+.modal {
+    max-width: 100% !important;
+}
+
+.add-furn-content {
+    width: 1000px !important;
+}
+
+/* .add-furn-row{
+    width: 1440px;
+} */
+.modal-header {
+    background-color: var(--primary-bg);
+    padding: 20px 40px;
+}
+
+.af-close-btn {
+    background-color: black !important;
+    border-radius: 100px;
+    color: white;
+    background-image: url("asset/images/crss.png");
+}
+
+.af-furn-modal-inp textarea {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #51515175;
+    padding: 30px;
+}
+
+.af-furn-modal-inp input {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #51515175;
+}
+
+.af-furn-label {
+    top: 19%;
+    right: 25%;
+}
+
+.furn-modal-form {
+    padding: 0px;
+}
+
+.modal-body {
+    padding: 50px;
+}
+
+.af-modal-inp {
+    padding-top: 37px;
+}
+
+.af-modal-save {
+    margin-top: 40px;
+}
+
+/* ============================================================ END FURNISHING PAGE ========================= */
+.afd-container {
+    width: 60%;
+    margin: auto;
+    padding: 0px 35px;
+}
+
+.afd-badge-inp {
+    padding-top: 20px;
+}
+
+.badge-input-container {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #51515167;
+    border-radius: 6px;
+    padding: 0px 30px;
+
+}
+
+.afd-inp-sec h4 {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#badge-input {
+    border: none;
+    outline: none;
+    padding: 0px;
+}
+
+.badge {
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 20px;
+    margin-right: 5px;
+    padding-right: 5px;
+    display: inline-block;
+}
+
+.badge-close {
+    cursor: pointer;
+    margin-left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.548);
+    padding: 5px 15px;
+    border-radius: 100px;
+    background-image: url('asset/images/crss.png');
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.afd-dis-inp {
+    padding-top: 20px;
+}
+
+.afd-dis-inp textarea {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #51515175;
+    padding: 30px;
+}
+
+.afd-btns {
+    column-gap: 10px;
+}
+
+/* ==============================  */
+.clients-content {
+    width: 100%;
+}
+
+.clients-modal {
+    width: auto;
+    margin: auto;
+}
+
+.client-modal-inp {
+    row-gap: 10px;
+}
+
+.client-modal-inp button {
+    margin-top: 30px;
+    padding: 20px 0px;
+}
+
+.client-modal-title {
+    margin-left: 105px;
+}

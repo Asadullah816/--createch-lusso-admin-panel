@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lusso Admin Panel</title>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../index.css" />
+  </head>
+  <body>
+    <aside>
+      <div class="container p-0">
+        <div class="site-logo">
+          <img src="../images/logo.png" alt="" />
+        </div>
+        <div class="aside-menu">
+          <ul class="menu-ul">
+            <li
+              class="menu-item d-flex justify-content-start align-items-center"
+            >
+              <div class="menu-icon">
+                <img src="../images/deve-icon.svg" alt="" />
+              </div>
+              <a class="menu-link" href="../../index.html">Developments</a>
+            </li>
+            <li
+              class="menu-item d-flex justify-content-start align-items-center"
+            >
+              <div class="menu-icon">
+                <img src="../images/deve-icon.svg" alt="" />
+              </div>
+              <a class="menu-link" href="addApartment.html">Apartments</a>
+            </li>
+            <li
+              class="menu-item active d-flex justify-content-start align-items-center"
+            >
+              <div class="menu-icon">
+                <img src="../images/furn-icon.svg" alt="" />
+              </div>
+              <a class="menu-link" href="../../Furnishing.html">Furnishings</a>
+            </li>
+            <li
+              class="menu-item d-flex justify-content-start align-items-center"
+            >
+              <div class="menu-icon">
+                <img src="../images/fbr-icon.svg" alt="" />
+              </div>
+              <a class="menu-link" href="../../fabric.html">Fabrics</a>
+            </li>
+            <li
+              class="menu-item d-flex justify-content-start align-items-center"
+            >
+              <div class="menu-icon">
+                <img src="../images/client-icon.svg" alt="" />
+              </div>
+              <a class="menu-link" href="../../clients.html">Clients</a>
+            </li>
+            <li
+              class="menu-item d-flex justify-content-start align-items-center"
+            >
+              <div class="menu-icon">
+                <img src="../images/client-icon.svg" alt="" />
+              </div>
+              <a class="menu-link" href="../../demoUser.html">Demo Users</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ================================================== -->
+    <!-- =================    MAIN CONTAINER   ============ -->
+    <div class="main-container container-fluid">
+      <!-- ======================= HEADER ====================== -->
+      <div class="contianer-fluid">
+        <div class="header d-flex justify-content-between align-items-center">
+          <div class="site-name">
+            <h3>Admin Panel</h3>
+          </div>
+          <div
+            class="admin-info d-flex justify-content-centter align-items-center"
+          >
+            <p>Admin Name</p>
+            <div class="user-img">
+              <img src="../images/user-igm.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- =-===================== END HEADER ==================== -->
+      <!-- ====================================================== -->
+
+      <!-- ================ MAIN CONTENT ========================== -->
+      <div class="apf-container">
+        <div class="apf-info">
+          <div class="row">
+            <div class="col-6">
+              <div
+                class="apf-info-div d-flex justify-content-start align-items-start flex-column"
+              >
+                <span>Development Name:</span>
+                <p>Serene Life Residences</p>
+                <div class="apf-inp apf-inp2 d-flex flex-column w-100">
+                  <label for="">Client Name</label>
+                  <input
+                    type="text"
+                    placeholder="Client Name"
+                    value="Nicole Kidman"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-6 ps-3">
+              <div
+                class="apf-info-div d-flex justify-content-start align-items-start flex-column"
+              >
+                <span>Apartment Number:</span>
+                <p>B - 70</p>
+                <div class="apf-inp apf-inp2 d-flex flex-column w-100">
+                  <label for="">Client Email</label>
+                  <input
+                    type="text"
+                    placeholder="Client Name"
+                    value="nkidman@example.com"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="apf-add-spaces d-flex flex-column">
+          <h4 class="text-center">Furnishing Pack</h4>
+          <div class="apf-accord">
+            <div class="accordion d-flex flex-column" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    data-mdb-collapse-init
+                    class="accordion-button"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Furnishing 1
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-mdb-parent="#accordionExample"
+                >
+                  <div class="accordion-body d-flex flex-column">
+                    <div class="choose-fp">
+                      <div class="row">
+                        <div class="col-7">
+                          <div class="choose-fp-inp d-flex flex-column">
+                            <label for="">Choose Furnishing Package</label>
+                            <select
+                              class="form-select selects inputs"
+                              name=""
+                              id=""
+                            >
+                              <option selected value="Designer Pack">
+                                Designer Pack
+                              </option>
+                              <option value="">Designer Ano</option>
+                              <option value="">Designer Pack</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-5">
+                          <div class="choose-fp-inp d-flex flex-column">
+                            <label for="">Price in AUD</label>
+                            <input
+                              class="inputs"
+                              type="number"
+                              value="9600.00"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="apf-space-head d-flex justify-content-between align-items-center choose-head"
+                    >
+                      <div class="apf-space-name d-flex align-item-center">
+                        <img src="../images/furn-icon.svg" alt="" />
+                        <p class="ps-3">Add Fabric Deals to this furnishing</p>
+                      </div>
+                      <div class="apf-space-total">
+                        <p>Total Spaces Added: 5</p>
+                      </div>
+                    </div>
+                    <div class="fdeals-inp">
+                      <div class="row">
+                        <div class="col-8">
+                          <div class="choose-fp-inp d-flex flex-column">
+                            <label for="">Deal Name</label>
+                            <select
+                              class="form-select selects inputs"
+                              name=""
+                              id=""
+                            >
+                              <option selected value="Designer Pack">
+                                Premium Fabric
+                              </option>
+                              <option value="">Premium Fabric</option>
+                              <option value="">Premium Fabric</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="choose-fp-inp d-flex flex-column">
+                            <label for="">Price in AUD</label>
+                            <input
+                              class="inputs"
+                              type="number"
+                              value="3200.00"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row fdeal-curtains">
+                        <div class="col-5">
+                          <div class="choose-fp-inp d-flex flex-column">
+                            <label for="">Curtains or Roller Blind?</label>
+                            <select
+                              class="form-select selects inputs"
+                              name=""
+                              id=""
+                            >
+                              <option selected value="Designer Pack">
+                                Curtains
+                              </option>
+                              <option value="">Curtains</option>
+                              <option value="">Curtains</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-7">
+                          <div class="choose-fp-inp d-flex flex-column">
+                            <label for="">Price in AUD</label>
+                            <div
+                              class="fdeals-colors d-flex align-items-center"
+                            >
+                              <div class="fd-color color-active">
+                                <p>White</p>
+                              </div>
+                              <div class="fd-color">
+                                <p>Snow</p>
+                              </div>
+                              <div class="fd-color color-active">
+                                <p>Purple</p>
+                              </div>
+                              <div class="fd-color">
+                                <p>Black</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fdeals-inp deal-clone">
+                      <div class="row">
+                        <div class="col-8">
+                          <div class="choose-fp-inp d-flex flex-column">
+                            <label for="">Deal Name</label>
+                            <select
+                              class="form-select selects inputs"
+                              name=""
+                              id=""
+                            >
+                              <option selected value="Designer Pack">
+                                Premium Fabric
+                              </option>
+                              <option value="">Premium Fabric</option>
+                              <option value="">Premium Fabric</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="choose-fp-inp d-flex flex-column">
+                            <label for="">Price in AUD</label>
+                            <input
+                              class="inputs"
+                              type="number"
+                              placeholder="3600.00"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row fdeal-curtains">
+                        <div class="col-5">
+                          <div class="choose-fp-inp d-flex flex-column">
+                            <label for="">Curtains or Roller Blind?</label>
+                            <select
+                              class="form-select selects inputs"
+                              name=""
+                              id=""
+                              aria-placeholder="Curtains"
+                            >
+                              <option value="Designer Pack">Curtains</option>
+                              <option value="">Curtains</option>
+                              <option value="">Curtains</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-7">
+                          <div class="choose-fp-inp d-flex flex-column">
+                            <label for="">Price in AUD</label>
+                            <div
+                              class="fdeals-colors d-flex align-items-center"
+                            >
+                              <div class="fd-color">
+                                <p>White</p>
+                              </div>
+                              <div class="fd-color">
+                                <p>Snow</p>
+                              </div>
+                              <div class="fd-color">
+                                <p>Purple</p>
+                              </div>
+                              <div class="fd-color">
+                                <p>Black</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="add-another-deal align-self-center">
+                    <p>[+] Add another Fabric Deal</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="apf-last-btns d-flex justify-content-center align-items-center flex-column"
+            >
+              <button class="custom-btn add-another-furn">
+                Add Another Furnishing
+              </button>
+              <a
+                href="addMotarization.html"
+                type="submit"
+                class="custom-btn continue"
+                >Continue to Motorisation</a
+              >
+              <a href="addAprtFurn.html" class="back custom-btn" type="sumbit"
+                >Back</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ======================================================== -->
+
+      <!-- ================================================== -->
+      <!-- ==============   END MAIN CONTAINER   ============ -->
+    </div>
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"
+    ></script>
+
+    <script src="../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var addButton = document.querySelector(".add-another-space");
+
+        addButton.addEventListener("click", function () {
+          var contentToAppend = document
+            .querySelector(".apf-clone .apf-bed-sec")
+            .cloneNode(true);
+
+          document.querySelector(".apf-clone").appendChild(contentToAppend);
+        });
+      });
+      // Select all elements with the class '.fd-color'
+      let fdColors = document.querySelectorAll(".fd-color");
+
+      // Loop through each element and add a click event listener
+      fdColors.forEach(function (fdColor) {
+        fdColor.addEventListener("click", function () {
+          // Toggle the class 'color-active' on the clicked element
+          this.classList.toggle("color-active");
+        });
+      });
+
+      <!-- ============================================  Add another Deal ======================= -->
+      document.addEventListener("DOMContentLoaded", function () {
+        var addButton = document.querySelector(".add-another-deal");
+
+        addButton.addEventListener("click", function () {
+          var contentToAppend = document
+            .querySelector(".deal-clone")
+            .cloneNode(true);
+
+          document
+            .querySelector(".accordion-body")
+            .appendChild(contentToAppend);
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        var addButton = document.querySelector(".add-another-furn");
+
+        addButton.addEventListener("click", function () {
+          var contentToAppend = document
+            .querySelector(".accordion-item")
+            .cloneNode(true);
+
+          document.querySelector(".accordion").appendChild(contentToAppend);
+        });
+      });
+    </script>
+  </body>
+</html>
