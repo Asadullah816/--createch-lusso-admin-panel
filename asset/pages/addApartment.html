@@ -106,7 +106,8 @@
                 Apartment Edited Successfully!
               </div>
               <div class="aprt-form-create">
-                <a class="custom-btn dark" href="addAprtFurn.html" >Add Apartment</a>
+                <button class="table-edit" class="custom-btn dark"  data-mdb-ripple-init
+                  data-mdb-modal-init data-mdb-target="#clientUpdate">Add Apartment</button>
               </div>
             </div>
 
@@ -143,8 +144,7 @@
               <td class="col center-td">Serene Life Residences</td>
               <td class="col-2 last-td">
                 <div class="table-btns d-flex justify-content-center align-items-center">
-                  <a class="table-edit" class="custom-btn dark"  class="custom-btn dark" data-mdb-ripple-init
-                  data-mdb-modal-init data-mdb-target="#clientUpdate">Edit</a>
+                   <a href="addAprtFurn.html" class="custom-btn dark">Edit</a>
                   <a class="table-del" href="#" onclick="openModal()">Delete</a>
                 </div>
               </td>
@@ -154,8 +154,7 @@
               <td class="col center-td">Serene Life Residences</td>
               <td class="col-2 last-td">
                 <div class="table-btns d-flex justify-content-center align-items-center">
-                  <a class="table-edit" class="custom-btn dark"  class="custom-btn dark" data-mdb-ripple-init
-                  data-mdb-modal-init data-mdb-target="#clientUpdate">Edit</a>
+                  <a href="addAprtFurn.html" class="custom-btn dark">Edit</a>
                   <a class="table-del" href="#" onclick="openModal()">Delete</a>
                 </div>
               </td>
@@ -165,8 +164,7 @@
               <td class="col center-td">Serene Life Residences</td>
               <td class="col-2 last-td">
                 <div class="table-btns d-flex justify-content-center align-items-center">
-                  <a class="table-edit" class="custom-btn dark"  class="custom-btn dark" data-mdb-ripple-init
-                  data-mdb-modal-init data-mdb-target="#clientUpdate" >Edit</a>
+                   <a href="addAprtFurn.html" class="custom-btn dark">Edit</a>
                   <a class="table-del" href="#" onclick="openModal()">Delete</a>
                 </div>
               </td>
@@ -178,8 +176,8 @@
     </div>
     <!-- ========================= Modal ====================== -->
     <div class="modal fade" id="clientUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog clients-modal">
-        <div class="modal-content clients-content">
+      <div class="modal-dialog clients-modal  add-apart-modal">
+        <div class="modal-content clients-content add-aprt-content">
           <div class="modal-header">
             <h5 class="modal-title align-self-center client-modal-title" id="exampleModalLabel">
               Add New Apartments
