@@ -87,3 +87,18 @@ function createBadge(text) {
     document.getElementById("badge-input")
   );
 }
+
+// ================================================================
+// ================================================================
+// ================================================================
+document.addEventListener("DOMContentLoaded", function () {
+  var addButton = document.querySelector(".add-another-space");
+
+  addButton.addEventListener("click", function () {
+    var contentToAppend = document
+      .querySelector(".apf-clone .apf-bed-sec")
+      .cloneNode(true);
+
+    document.querySelector(".apf-clone").appendChild(contentToAppend);
+  });
+});
