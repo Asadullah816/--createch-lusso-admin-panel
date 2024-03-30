@@ -20,9 +20,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../index.css" />
+    <link rel="stylesheet" href="../../phone.css" />
   </head>
+
   <body>
-    <aside>
+    <aside id="sidebar">
+      <div class="cross-btn" onclick="crossBtn()">
+        <i class="fas fa-xmark"></i>
+      </div>
       <div class="container p-0">
         <div class="site-logo">
           <img src="../images/logo.png" alt="" />
@@ -88,6 +93,11 @@
       <!-- ======================= HEADER ====================== -->
       <div class="contianer-fluid">
         <div class="header d-flex justify-content-between align-items-center">
+          <div class="toggle-btn" onclick="toggleSideNav()">
+            <div class="toggle-bar"></div>
+            <div class="toggle-bar"></div>
+            <div class="toggle-bar"></div>
+          </div>
           <div class="site-name">
             <h3>Admin Panel</h3>
           </div>
@@ -108,7 +118,7 @@
       <div class="apf-container">
         <div class="apf-info">
           <div class="row">
-            <div class="col-6">
+            <div class="col-md-6 col-sm-12">
               <div
                 class="apf-info-div d-flex justify-content-start align-items-start flex-column"
               >
@@ -124,7 +134,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 ps-3">
+            <div class="col-md-6 col-sm-12 ps-3">
               <div
                 class="apf-info-div d-flex justify-content-start align-items-start flex-column"
               >
@@ -169,7 +179,7 @@
                   <div class="accordion-body d-flex flex-column">
                     <div class="choose-fp">
                       <div class="row">
-                        <div class="col-7">
+                        <div class="col-md-7 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Choose Furnishing Package</label>
                             <select
@@ -185,7 +195,7 @@
                             </select>
                           </div>
                         </div>
-                        <div class="col-5">
+                        <div class="col-md-5 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Price in AUD</label>
                             <input
@@ -210,7 +220,7 @@
                     </div>
                     <div class="fdeals-inp">
                       <div class="row">
-                        <div class="col-8">
+                        <div class="col-md-8 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Deal Name</label>
                             <select
@@ -226,7 +236,7 @@
                             </select>
                           </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-4 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Price in AUD</label>
                             <input
@@ -238,7 +248,7 @@
                         </div>
                       </div>
                       <div class="row fdeal-curtains">
-                        <div class="col-5">
+                        <div class="col-md-5 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Curtains or Roller Blind?</label>
                             <select
@@ -254,23 +264,47 @@
                             </select>
                           </div>
                         </div>
-                        <div class="col-7">
+                        <div class="col--md-7 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Price in AUD</label>
                             <div
                               class="fdeals-colors d-flex align-items-center"
                             >
-                              <div class="fd-color color-active">
-                                <p>White</p>
+                              <div class="fd-color">
+                                <label for="color01">White</label>
+                                <input
+                                  type="checkbox"
+                                  class="color-checkbox"
+                                  name=""
+                                  id="color01"
+                                />
                               </div>
                               <div class="fd-color">
-                                <p>Snow</p>
-                              </div>
-                              <div class="fd-color color-active">
-                                <p>Purple</p>
+                                <label for="color02">Snow</label>
+                                <input
+                                  type="checkbox"
+                                  class="color-checkbox"
+                                  name=""
+                                  id="color02"
+                                />
                               </div>
                               <div class="fd-color">
-                                <p>Black</p>
+                                <label for="color03">Purples</label>
+                                <input
+                                  type="checkbox"
+                                  class="color-checkbox"
+                                  name=""
+                                  id="color03"
+                                />
+                              </div>
+                              <div class="fd-color">
+                                <label for="color04">Black</label>
+                                <input
+                                  type="checkbox"
+                                  class="color-checkbox"
+                                  name=""
+                                  id="color04"
+                                />
                               </div>
                             </div>
                           </div>
@@ -279,7 +313,7 @@
                     </div>
                     <div class="fdeals-inp deal-clone">
                       <div class="row">
-                        <div class="col-8">
+                        <div class="col-md-8 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Deal Name</label>
                             <select
@@ -295,7 +329,7 @@
                             </select>
                           </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-4 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Price in AUD</label>
                             <input
@@ -307,7 +341,7 @@
                         </div>
                       </div>
                       <div class="row fdeal-curtains">
-                        <div class="col-5">
+                        <div class="col-md-5 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Curtains or Roller Blind?</label>
                             <select
@@ -322,23 +356,49 @@
                             </select>
                           </div>
                         </div>
-                        <div class="col-7">
+                        <div class="col-md-7 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Price in AUD</label>
                             <div
                               class="fdeals-colors d-flex align-items-center"
                             >
                               <div class="fd-color">
-                                <p>White</p>
+                                <label for="color1">White</label>
+                                <input
+                                  id="color1"
+                                  type="checkbox"
+                                  class="color-checkbox"
+                                  name=""
+                                  id=""
+                                />
                               </div>
                               <div class="fd-color">
-                                <p>Snow</p>
+                                <label for="color2">Snow</label>
+                                <input
+                                  itemid="color2"
+                                  type="checkbox"
+                                  class="color-checkbox"
+                                  name=""
+                                  id="color2"
+                                />
                               </div>
                               <div class="fd-color">
-                                <p>Purple</p>
+                                <label for="color3">Purples</label>
+                                <input
+                                  type="checkbox"
+                                  class="color-checkbox"
+                                  name=""
+                                  id="color3"
+                                />
                               </div>
                               <div class="fd-color">
-                                <p>Black</p>
+                                <label for="color4">Black</label>
+                                <input
+                                  type="checkbox"
+                                  class="color-checkbox"
+                                  name=""
+                                  id="color4"
+                                />
                               </div>
                             </div>
                           </div>
@@ -399,17 +459,55 @@
         });
       });
       // Select all elements with the class '.fd-color'
-      let fdColors = document.querySelectorAll(".fd-color");
-
-      // Loop through each element and add a click event listener
-      fdColors.forEach(function (fdColor) {
-        fdColor.addEventListener("click", function () {
-          // Toggle the class 'color-active' on the clicked element
-          this.classList.toggle("color-active");
+      // Select all checkboxes with the class 'fd-checkbox'
+      let fdCheckboxes = document.querySelectorAll(".color-checkbox");
+      let fdeal = document.querySelectorAll(".fdeals-colors");
+      // Loop through each checkbox and add a change event listener
+      fdCheckboxes.forEach(function (checkbox) {
+        checkbox.addEventListener("change", function () {
+          // Toggle the class 'color-active' on the parent element when the checkbox is checked or unchecked
+          if (this.checked) {
+            this.parentNode.classList.add("color-active");
+          } else {
+            this.parentNode.classList.remove("color-active");
+          }
         });
       });
 
       <!-- ============================================  Add another Deal ======================= -->
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var addButton = document.querySelector(".add-another-furn");
+
+        addButton.addEventListener("click", function () {
+          var accordionItem = document.querySelector(".accordion-item");
+          var contentToAppend = accordionItem.cloneNode(true);
+
+          // Generate unique IDs for the cloned accordion item and its collapse element
+          var newId =
+            "collapse" +
+            (document.querySelectorAll(".accordion-item").length + 1);
+          var newHeadingId =
+            "heading" +
+            (document.querySelectorAll(".accordion-item").length + 1);
+
+          // Update IDs and attributes of the cloned elements
+          contentToAppend.querySelector(".accordion-collapse").id = newId;
+          contentToAppend
+            .querySelector(".accordion-button")
+            .setAttribute("data-mdb-target", "#" + newId);
+          contentToAppend
+            .querySelector(".accordion-button")
+            .setAttribute("aria-controls", newId);
+          contentToAppend.querySelector(".accordion-header").id = newHeadingId;
+          contentToAppend
+            .querySelector(".accordion-button")
+            .setAttribute("aria-labelledby", newHeadingId);
+
+          document.querySelector(".accordion").appendChild(contentToAppend);
+        });
+      });
+
       document.addEventListener("DOMContentLoaded", function () {
         var addButton = document.querySelector(".add-another-deal");
 
@@ -418,22 +516,47 @@
             .querySelector(".deal-clone")
             .cloneNode(true);
 
+          // Generate a unique ID for the cloned deal
+          var uniqueId = "deal-" + Math.random().toString(36).substr(2, 9);
+
+          // Update IDs of checkboxes and associated labels inside the cloned deal
+          var checkboxes = contentToAppend.querySelectorAll(".color-checkbox");
+          checkboxes.forEach(function (checkbox) {
+            var originalId = checkbox.getAttribute("id");
+            var newId = originalId + "-" + uniqueId;
+            checkbox.setAttribute("id", newId);
+
+            // Update label's 'for' attribute to match new checkbox ID
+            var label = contentToAppend.querySelector(
+              'label[for="' + originalId + '"]'
+            );
+            if (label) {
+              label.setAttribute("for", newId);
+            }
+          });
+
+          // Add event listeners to the checkboxes in the cloned deal
+          // Add event listeners to the checkboxes in the cloned deal
+          checkboxes.forEach(function (checkbox) {
+            checkbox.addEventListener("change", function () {
+              if (this.checked) {
+                this.parentNode.classList.add("color-active");
+              } else {
+                this.parentNode.classList.remove("color-active");
+              }
+            });
+          });
+
           document
             .querySelector(".accordion-body")
             .appendChild(contentToAppend);
         });
       });
-      document.addEventListener("DOMContentLoaded", function () {
-        var addButton = document.querySelector(".add-another-furn");
+      // ==============================================================================
 
-        addButton.addEventListener("click", function () {
-          var contentToAppend = document
-            .querySelector(".accordion-item")
-            .cloneNode(true);
-
-          document.querySelector(".accordion").appendChild(contentToAppend);
-        });
-      });
+      //++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //++++++++++++++++++++++++++++++++++++++++++++++++++++
     </script>
   </body>
 </html>

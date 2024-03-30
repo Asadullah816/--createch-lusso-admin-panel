@@ -21,10 +21,14 @@
     />
 
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="phone.css" />
   </head>
 
   <body>
-    <aside>
+    <aside id="sidebar">
+      <div class="cross-btn" onclick="crossBtn()">
+        <i class="fas fa-xmark"></i>
+      </div>
       <div class="container p-0">
         <div class="site-logo">
           <img src="asset/images/logo.png" alt="" />
@@ -45,9 +49,7 @@
               <div class="menu-icon">
                 <img src="asset/images/deve-icon.svg" alt="" />
               </div>
-              <a class="menu-link" href="appartment.html"
-                >Apartments</a
-              >
+              <a class="menu-link" href="appartment.html">Apartments</a>
             </li>
             <li
               class="menu-item d-flex justify-content-start align-items-center"
@@ -91,6 +93,11 @@
     <div class="main-container container-fluid">
       <div class="contianer-fluid">
         <div class="header d-flex justify-content-between align-items-center">
+          <div class="toggle-btn" onclick="toggleSideNav()">
+            <div class="toggle-bar"></div>
+            <div class="toggle-bar"></div>
+            <div class="toggle-bar"></div>
+          </div>
           <div class="site-name">
             <h3>Admin Panel</h3>
           </div>
@@ -123,7 +130,7 @@
       </div>
       <div class="fb-table-sec">
         <div class="aprt-table">
-          <div class="table-container">
+          <div class="table-container table-responsive">
             <table class="table-striped table">
               <thead>
                 <tr>
@@ -131,7 +138,7 @@
                   <th class="col-2 th center-th">Apartment No.</th>
                   <th class="col-2 th center-th">Client Name</th>
                   <th class="col th">Client Email</th>
-                  <th class="col-2 th last-th">Action</th>
+                  <th class="col-2 col-md-3 th last-th">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -140,7 +147,7 @@
                   <td class="col-2 center-td">A - 01</td>
                   <td class="col-2 center-td">demo1@lusso.com</td>
                   <td class="col"><p>nkidman@example.com</p></td>
-                  <td class="col-2 last-td">
+                  <td class="col-2 col-md-3 last-td">
                     <div
                       class="table-btns d-flex justify-content-center align-items-center"
                     >
@@ -163,7 +170,7 @@
                   <td class="col-2 center-td">A - 02</td>
                   <td class="col-2 center-td">Hugh Jackman</td>
                   <td class="col"><p>demo2@lusso.com</p></td>
-                  <td class="col-2 last-td">
+                  <td class="col-2 col-md-3 last-td">
                     <div
                       class="table-btns d-flex justify-content-center align-items-center"
                     >

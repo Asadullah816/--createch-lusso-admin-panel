@@ -13,10 +13,14 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="phone.css" />
 </head>
 
 <body>
-  <aside>
+  <aside id="sidebar">
+       <div class="cross-btn" onclick="crossBtn()">
+        <i class="fas fa-xmark"></i>
+      </div>
     <div class="container p-0">
       <div class="site-logo">
         <img src="asset/images/logo.png" alt="" />
@@ -69,6 +73,11 @@
   <div class="main-container container-fluid">
     <div class="contianer-fluid">
       <div class="header d-flex justify-content-between align-items-center">
+         <div class="toggle-btn" onclick="toggleSideNav()">
+            <div class="toggle-bar"></div>
+            <div class="toggle-bar"></div>
+            <div class="toggle-bar"></div>
+          </div>
         <div class="site-name">
           <h3>Admin Panel</h3>
         </div>

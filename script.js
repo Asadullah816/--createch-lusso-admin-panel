@@ -102,3 +102,32 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".apf-clone").appendChild(contentToAppend);
   });
 });
+
+//======================================================================
+//======================================================================
+function toggleSideNav() {
+  var sideNav = document.getElementById("sidebar");
+  let toggle = document.getElementsByClassName("toggle-btn")[0];
+  let cross = document.getElementsByClassName("cross-btn")[0];
+  sideNav.style.marginLeft =
+    sideNav.style.marginLeft === "-300px" ? "0px" : "-300px";
+  toggle.style.display = toggle.style.display === "block" ? "none" : "block";
+  cross.style.display = cross.style.display === "none" ? "block" : "none";
+}
+//======================================================================
+function crossBtn() {
+  var sideNav = document.getElementById("sidebar");
+  let toggle = document.getElementsByClassName("toggle-btn")[0];
+  let cross = document.getElementsByClassName("cross-btn")[0];
+  sideNav.style.marginLeft =
+    sideNav.style.marginLeft === "-300px" ? "0px" : "-300px";
+  toggle.style.display = toggle.style.display === "block" ? "none" : "block";
+  cross.style.display = cross.style.display === "none" ? "block" : "none";
+}
+
+function closeSideNav() {
+  var sideNav = document.getElementById("sidebar");
+  let crossBar = document.querySelector(".cross-btn");
+  sideNav.style.marginLeft = "-300";
+  crossBar.style.display = "none";
+}

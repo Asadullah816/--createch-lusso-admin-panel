@@ -12,10 +12,14 @@
   <!-- MDB -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../../index.css" />
+  <link rel="stylesheet" href="../../phone.css" />
 </head>
 
 <body>
-  <aside>
+  <aside id="sidebar">
+       <div class="cross-btn" onclick="crossBtn()">
+        <i class="fas fa-xmark"></i>
+      </div>
     <div class="container p-0">
       <div class="site-logo">
         <img src="../images/logo.png" alt="" />
@@ -69,6 +73,11 @@
     <!-- ======================= HEADER ====================== -->
     <div class="contianer-fluid">
       <div class="header d-flex justify-content-between align-items-center">
+         <div class="toggle-btn" onclick="toggleSideNav()">
+            <div class="toggle-bar"></div>
+            <div class="toggle-bar"></div>
+            <div class="toggle-bar"></div>
+          </div>
         <div class="site-name">
           <h3>Admin Panel</h3>
         </div>
@@ -84,9 +93,9 @@
     <!-- ====================================================== -->
 
     <div class="add-aprtment">
-      <div class="row">
+      <div class="row edit-aprt-row">
         <form action=""></form>
-        <div class="col-lg-5">
+        <div class="col-lg-5 edit-ai-col col-md-6">
           <div class="aprt-form">
 
             <div class="aprt-form-inp">
@@ -113,7 +122,7 @@
 
           </div>
         </div>
-        <div class="af-pos col-lg-2">
+        <div class="af-pos col-lg-2 col-md-6 edit-aimg-col">
           <div class="af-file-inp">
             <img class="w-100" src="../images/file Img.png" alt="" />
           </div>
@@ -129,20 +138,20 @@
       </div>
     </div>
     <div class="aprt-table">
-      <div class="table-container">
+      <div class="table-container table-responsive">
         <table class="table-striped table">
           <thead>
             <tr>
-              <th class="col-3 th">Apartment Number</th>
-              <th class="col th center-th">Development Name</th>
-              <th class="col-2 th last-th">Action</th>
+              <th class="col-3 col-lg-4 th">Apartment Number</th>
+              <th class="col col-lg-4 th center-th">Development Name</th>
+              <th class="col-2 col-md-3 col-lg-4 th last-th">Action</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="col-3">B - 70</td>
-              <td class="col center-td">Serene Life Residences</td>
-              <td class="col-2 last-td">
+              <td class="col-3 col-lg-3">B - 70</td>
+              <td class="col center-td col-lg-4">Serene Life Residences</td>
+              <td class="col-2 col-md-3 last-td col-lg-5">
                 <div class="table-btns d-flex justify-content-center align-items-center">
                    <a href="addAprtFurn.html" class="custom-btn dark">Edit</a>
                   <a class="table-del" href="#" onclick="openModal()">Delete</a>
@@ -150,19 +159,19 @@
               </td>
             </tr>
             <tr>
-              <td class="col-3">B - 70</td>
-              <td class="col center-td">Serene Life Residences</td>
-              <td class="col-2 last-td">
+              <td class="col-3 col-lg-3">B - 70</td>
+              <td class="col center-td col-lg-4">Serene Life Residences</td>
+              <td class="col-2 col-md-3 last-td col-lg-5">
                 <div class="table-btns d-flex justify-content-center align-items-center">
-                  <a href="addAprtFurn.html" class="custom-btn dark">Edit</a>
+                   <a href="addAprtFurn.html" class="custom-btn dark">Edit</a>
                   <a class="table-del" href="#" onclick="openModal()">Delete</a>
                 </div>
               </td>
             </tr>
             <tr>
-              <td class="col-3">B - 70</td>
-              <td class="col center-td">Serene Life Residences</td>
-              <td class="col-2 last-td">
+              <td class="col-3 col-lg-3">B - 70</td>
+              <td class="col center-td col-lg-4">Serene Life Residences</td>
+              <td class="col-2 col-md-3 last-td col-lg-5">
                 <div class="table-btns d-flex justify-content-center align-items-center">
                    <a href="addAprtFurn.html" class="custom-btn dark">Edit</a>
                   <a class="table-del" href="#" onclick="openModal()">Delete</a>

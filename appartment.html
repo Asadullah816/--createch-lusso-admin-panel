@@ -13,10 +13,14 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="phone.css" />
 </head>
 
 <body>
-  <aside>
+  <aside id="sidebar">
+       <div class="cross-btn" onclick="crossBtn()">
+        <i class="fas fa-xmark"></i>
+      </div>
     <div class="container p-0">
       <div class="site-logo">
         <img src="asset/images/logo.png" alt="" />
@@ -69,6 +73,11 @@
   <div class="main-container container-fluid">
     <div class="contianer-fluid">
       <div class="header d-flex justify-content-between align-items-center">
+         <div class="toggle-btn" onclick="toggleSideNav()">
+            <div class="toggle-bar"></div>
+            <div class="toggle-bar"></div>
+            <div class="toggle-bar"></div>
+          </div>
         <div class="site-name">
           <h3>Admin Panel</h3>
         </div>
@@ -88,12 +97,11 @@
           <div class="col-6">
             <div class="apf-info-div aprt-page d-flex justify-content-start align-items-start flex-column">
                 <label for="">Select Development</label>
-              <select name="" class="selects" id="">
+              <select name="" class="selects" id="">  
                 <option selected class="selects" value="">Select Apartment</option>
                 <option value="">Select Apartment</option>
                 <option value="">Select Apartment</option>
               </select>
-
               <div class="apf-inp apf-inp2 d-flex flex-column w-100">
                 <label for="">Owner Name</label>
                 <input class="inputs border-0" type="text" placeholder="" />
