@@ -83,6 +83,10 @@ aside {
     color: var(--text-primary);
 }
 
+.menu-link {
+    column-gap: 20px;
+}
+
 .menu-item {
     column-gap: 20px;
     transition: all .3s;
@@ -938,12 +942,24 @@ table {
     display: inline-block;
 }
 
+.badge input {
+    border: none;
+    background-color: transparent;
+}
+
+.badge input:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
 .badge-close {
     cursor: pointer;
-    margin-left: 20px;
+    /* margin-left: px; */
     color: white;
     background-color: rgba(0, 0, 0, 0.548);
-    padding: 5px 15px;
+    padding: 10px 15px;
     border-radius: 100px;
     background-image: url('asset/images/crss.png');
     background-repeat: no-repeat;
@@ -1033,4 +1049,37 @@ table {
 
 .apf-row {
     width: 100%;
+}
+
+.edit-btn {
+    padding: 3.5px 20px !important;
+}
+
+
+
+/* ================================ */
+/* ================================ */
+/* ================================ */
+.afd-badge-inp {
+    /* Your existing styles */
+}
+
+.badge-input-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* .inputs {
+    border: ;
+    outline: none;
+    background: transparent;
+} */
+
+.badge-close {
+    cursor: pointer;
+    margin-left: -75px;
+}
+
+.badge:empty {
+    display: flex;
 }

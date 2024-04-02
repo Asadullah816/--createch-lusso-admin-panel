@@ -1,368 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lusso Admin Panel</title>
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- MDB -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
-      rel="stylesheet"
-    />
 
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="phone.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lusso Admin Panel</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
 
-  <body>
-    <aside id="sidebar">
-      <div class="cross-btn" onclick="crossBtn()">
-        <i class="fas fa-xmark"></i>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="phone.css" />
+</head>
+
+<body>
+  <aside id="sidebar">
+    <div class="cross-btn" onclick="crossBtn()">
+      <i class="fas fa-xmark"></i>
+    </div>
+    <div class="container p-0">
+      <div class="site-logo">
+        <img src="asset/images/logo.png" alt="" />
       </div>
-      <div class="container p-0">
-        <div class="site-logo">
-          <img src="asset/images/logo.png" alt="" />
-        </div>
-        <div class="aside-menu">
-          <ul class="menu-ul">
-            <li
-              class="menu-item d-flex justify-content-start align-items-center"
-            >
+      <div class="aside-menu">
+        <ul class="menu-ul">
+          <li class="menu-item d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="index.html">
               <div class="menu-icon">
                 <img src="asset/images/deve-icon.svg" alt="" />
               </div>
-              <a class="menu-link" href="index.html">Developments</a>
-            </li>
-            <li
-              class="menu-item d-flex justify-content-start align-items-center"
-            >
+              Developments
+            </a>
+          </li>
+          <li class="menu-item d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="appartment.html">
               <div class="menu-icon">
                 <img src="asset/images/deve-icon.svg" alt="" />
               </div>
-              <a class="menu-link" href="appartment.html">Apartments</a>
-            </li>
-            <li
-              class="menu-item d-flex justify-content-start align-items-center"
-            >
+              Apartments
+            </a>
+          </li>
+          <li class="menu-item d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="Furnishing.html">
               <div class="menu-icon">
                 <img src="asset/images/furn-icon.svg" alt="" />
               </div>
-              <a class="menu-link" href="Furnishing.html">Furnishings</a>
-            </li>
-            <li
-              class="menu-item d-flex justify-content-start align-items-center"
-            >
+              Furnishings
+            </a>
+          </li>
+          <li class="menu-item d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="fabric.html">
               <div class="menu-icon">
                 <img src="asset/images/fbr-icon.svg" alt="" />
               </div>
-              <a class="menu-link" href="fabric.html">Fabrics</a>
-            </li>
-            <li
-              class="menu-item active d-flex justify-content-start align-items-center"
-            >
+              Fabrics
+            </a>
+          </li>
+          <li class="menu-item active d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="clients.html">
               <div class="menu-icon">
                 <img src="asset/images/client-icon.svg" alt="" />
               </div>
-              <a class="menu-link" href="clients.html">Clients</a>
-            </li>
-            <li
-              class="menu-item d-flex justify-content-start align-items-center"
-            >
+              Clients
+            </a>
+          </li>
+          <li class="menu-item d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="demoUser.html">
               <div class="menu-icon">
                 <img src="asset/images/client-icon.svg" alt="" />
               </div>
-              <a class="menu-link" href="demoUser.html">Demo Users</a>
-            </li>
-          </ul>
-        </div>
+              Demo Users
+            </a>
+          </li>
+        </ul>
       </div>
-    </aside>
-
-    <!-- ================================================== -->
-    <!-- =================    MAIN CONTAINER   ============ -->
-    <div class="main-container container-fluid">
-      <div class="contianer-fluid">
-        <div class="header d-flex justify-content-between align-items-center">
-          <div class="toggle-btn" onclick="toggleSideNav()">
-            <div class="toggle-bar"></div>
-            <div class="toggle-bar"></div>
-            <div class="toggle-bar"></div>
-          </div>
-          <div class="site-name">
-            <h3>Admin Panel</h3>
-          </div>
-          <div
-            class="admin-info d-flex justify-content-centter align-items-center"
-          >
-            <p>Admin Name</p>
-            <div class="user-img">
-              <img src="asset/images/user-igm.png" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- =-============================ -->
-      <div
-        class="development-sec d-flex justify-content-between align-item-center"
-      >
-        <div class="deve-content">
-          <p>Clients</p>
-          <div class="dev-icon">
-            <img src="asset/images/client-page-logo.png" alt="" />
-          </div>
-        </div>
-        <div
-          class="dev-total d-flex justify-content-center align-items-end flex-column"
-        >
-          <p>Total Clients:</p>
-          <h4>02</h4>
-        </div>
-      </div>
-      <div class="fb-table-sec">
-        <div class="aprt-table">
-          <div class="table-container table-responsive">
-            <table class="table-striped table">
-              <thead>
-                <tr>
-                  <th class="col-2 th">Development</th>
-                  <th class="col-2 th center-th">Apartment No.</th>
-                  <th class="col-2 th center-th">Client Name</th>
-                  <th class="col th">Client Email</th>
-                  <th class="col-2 col-md-3 th last-th">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="col-2">Serene Life Residences</td>
-                  <td class="col-2 center-td">B - 70</td>
-                  <td class="col-2 center-td">Nicole Kidman</td>
-                  <td class="col"><p>nkidman@example.com</p></td>
-                  <td class="col-2 col-md-3 last-td">
-                    <div
-                      class="table-btns d-flex justify-content-center align-items-center"
-                    >
-                      <a
-                        class="table-edit"
-                        class="custom-btn dark"
-                        type="button"
-                        class="custom-btn dark"
-                        data-mdb-ripple-init
-                        data-mdb-modal-init
-                        data-mdb-target="#clientUpdate"
-                        >Edit</a
-                      >
-                      <a class="table-del" onclick="openModal()">Delete</a>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="col-2">Serene Life Residences</td>
-                  <td class="col-2 center-td">C - 55</td>
-                  <td class="col-2 center-td">Hugh Jackman</td>
-                  <td class="col"><p>hjackman@example.com</p></td>
-                  <td class="col-2 col-md-3 last-td">
-                    <div
-                      class="table-btns d-flex justify-content-center align-items-center"
-                    >
-                      <a
-                        class="table-edit"
-                        class="custom-btn dark"
-                        type="button"
-                        class="custom-btn dark"
-                        data-mdb-ripple-init
-                        data-mdb-modal-init
-                        data-mdb-target="#clientUpdate"
-                        >Edit</a
-                      >
-                      <a class="table-del" onclick="openModal()">Delete</a>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div class="add-dev d-flex justify-content-center align-items-center">
-        <button
-          class="custom-btn dark"
-          type="button"
-          class="custom-btn dark"
-          data-mdb-ripple-init
-          data-mdb-modal-init
-          data-mdb-target="#clientModal"
-        >
-          Create New Login
-        </button>
-      </div>
-      <!-- =================m MODAL ==================== -->
-      <div
-        class="modal fade"
-        id="clientModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog clients-modal">
-          <div class="modal-content clients-content">
-            <div class="modal-header">
-              <h5
-                class="modal-title align-self-center client-modal-title"
-                id="exampleModalLabel"
-              >
-                Create Client Login
-              </h5>
-              <button
-                type="button"
-                class="btn-close af-close-btn"
-                data-mdb-ripple-init
-                data-mdb-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="client-modal-inp d-flex flex-column">
-                <select name="" class="selects" id="">
-                  <option selected value="">Select Development</option>
-                  <option value="">Development 1</option>
-                  <option value="">Development 2</option>
-                </select>
-                <select name="" class="selects" id="">
-                  <option selected value="">Select Apartment</option>
-                  <option value="">Apartment 1</option>
-                  <option value="">Apartment 2</option>
-                </select>
-                <input
-                  type="text"
-                  class="inputs"
-                  placeholder="Client Name"
-                  name=""
-                  id=""
-                />
-                <input
-                  type="email"
-                  class="inputs"
-                  placeholder="Client Email"
-                  name=""
-                  id=""
-                />
-                <input
-                  type="password"
-                  class="inputs"
-                  placeholder="Create Password"
-                  name=""
-                  id=""
-                />
-                <input
-                  type="password"
-                  class="inputs"
-                  placeholder="Confirm Password"
-                  name=""
-                  id=""
-                />
-                <button class="custom-btn dark">Create Login</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- ========================================== -->
-      <div
-        class="modal fade"
-        id="clientUpdate"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog clients-modal">
-          <div class="modal-content clients-content">
-            <div class="modal-header">
-              <h5
-                class="modal-title align-self-center client-modal-title"
-                id="exampleModalLabel"
-              >
-                Edit Client Login
-              </h5>
-              <button
-                type="button"
-                class="btn-close af-close-btn"
-                data-mdb-ripple-init
-                data-mdb-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="client-modal-inp d-flex flex-column">
-                <input
-                  type="email"
-                  class="inputs"
-                  placeholder="Client Email"
-                  value="nkidman@example.com"
-                  name=""
-                  id=""
-                />
-                <input
-                  type="password"
-                  class="inputs"
-                  placeholder="Create Password"
-                  name=""
-                  value="123213213"
-                  id=""
-                />
-
-                <button class="custom-btn dark">Update Login</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- =============================== -->
-
-      <!-- =================== DELETE MODAL =============== -->
-      <div id="myModal" class="modal-sec">
-        <!-- Modal content -->
-        <div
-          class="modal-content d-flex justify-content-center align-items-center flex-column"
-        >
-          <div class="w-100 modal-head">
-            <p>Delete Login?</p>
-          </div>
-          <div
-            class="modal-cont d-flex justify-content-center align-items-center flex-column"
-          >
-            <p>Are you sure you want to delete this Login?</p>
-            <div
-              class="modal-btns d-flex justify-content-center align-items-center"
-            >
-              <button class="mb-del" onclick="confirmDelete()">Yes</button>
-              <button class="mb-canc" onclick="closeModal()">No</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- =================== END DELETE MODAL =============== -->
-      <!-- ================================== -->
     </div>
+  </aside>
 
-    <!-- ================================================== -->
-    <!-- ==============   END MAIN CONTAINER   ============ -->
-    <!-- Button trigger modal -->
+  <!-- ================================================== -->
+  <!-- =================    MAIN CONTAINER   ============ -->
+  <div class="main-container container-fluid">
+    <div class="contianer-fluid">
+      <div class="header d-flex justify-content-between align-items-center">
+        <div class="toggle-btn" onclick="toggleSideNav()">
+          <div class="toggle-bar"></div>
+          <div class="toggle-bar"></div>
+          <div class="toggle-bar"></div>
+        </div>
+        <div class="site-name">
+          <h3>Admin Panel</h3>
+        </div>
+        <div class="admin-info d-flex justify-content-centter align-items-center">
+          <p>Admin Name</p>
+          <div class="user-img">
+            <img src="asset/images/user-igm.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- =-============================ -->
+    <div class="development-sec d-flex justify-content-between align-item-center">
+      <div class="deve-content">
+        <p>Clients</p>
+        <div class="dev-icon">
+          <img src="asset/images/client-page-logo.png" alt="" />
+        </div>
+      </div>
+      <div class="dev-total d-flex justify-content-center align-items-end flex-column">
+        <p>Total Clients:</p>
+        <h4>02</h4>
+      </div>
+    </div>
+    <div class="fb-table-sec">
+      <div class="aprt-table">
+        <div class="table-container table-responsive">
+          <table class="table-striped table">
+            <thead>
+              <tr>
+                <th class="col-2 th">Development</th>
+                <th class="col-2 th center-th">Apartment No.</th>
+                <th class="col-2 th center-th">Client Name</th>
+                <th class="col th">Client Email</th>
+                <th class="col-2 col-md-3 th last-th">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-2">Serene Life Residences</td>
+                <td class="col-2 center-td">B - 70</td>
+                <td class="col-2 center-td">Nicole Kidman</td>
+                <td class="col">
+                  <p>nkidman@example.com</p>
+                </td>
+                <td class="col-2 col-md-3 last-td">
+                  <div class="table-btns d-flex justify-content-center align-items-center">
+                    <a class="table-edit" class="custom-btn dark" type="button" class="custom-btn dark"
+                      data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#clientUpdate">Edit</a>
+                    <a class="table-del" onclick="openModal()">Delete</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="col-2">Serene Life Residences</td>
+                <td class="col-2 center-td">C - 55</td>
+                <td class="col-2 center-td">Hugh Jackman</td>
+                <td class="col">
+                  <p>hjackman@example.com</p>
+                </td>
+                <td class="col-2 col-md-3 last-td">
+                  <div class="table-btns d-flex justify-content-center align-items-center">
+                    <a class="table-edit" class="custom-btn dark" type="button" class="custom-btn dark"
+                      data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#clientUpdate">Edit</a>
+                    <a class="table-del" onclick="openModal()">Delete</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="add-dev d-flex justify-content-center align-items-center">
+      <button class="custom-btn dark" type="button" class="custom-btn dark" data-mdb-ripple-init data-mdb-modal-init
+        data-mdb-target="#clientModal">
+        Create New Login
+      </button>
+    </div>
+    <!-- =================m MODAL ==================== -->
+    <div class="modal fade" id="clientModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog clients-modal">
+        <div class="modal-content clients-content">
+          <div class="modal-header">
+            <h5 class="modal-title align-self-center client-modal-title" id="exampleModalLabel">
+              Create Client Login
+            </h5>
+            <button type="button" class="btn-close af-close-btn" data-mdb-ripple-init data-mdb-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="client-modal-inp d-flex flex-column">
+              <select name="" class="selects" id="">
+                <option selected value="">Select Development</option>
+                <option value="">Development 1</option>
+                <option value="">Development 2</option>
+              </select>
+              <select name="" class="selects" id="">
+                <option selected value="">Select Apartment</option>
+                <option value="">Apartment 1</option>
+                <option value="">Apartment 2</option>
+              </select>
+              <input type="text" class="inputs" placeholder="Client Name" name="" id="" />
+              <input type="email" class="inputs" placeholder="Client Email" name="" id="" />
+              <input type="password" class="inputs" placeholder="Create Password" name="" id="" />
+              <input type="password" class="inputs" placeholder="Confirm Password" name="" id="" />
+              <button class="custom-btn dark">Create Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========================================== -->
+    <div class="modal fade" id="clientUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog clients-modal">
+        <div class="modal-content clients-content">
+          <div class="modal-header">
+            <h5 class="modal-title align-self-center client-modal-title" id="exampleModalLabel">
+              Edit Client Login
+            </h5>
+            <button type="button" class="btn-close af-close-btn" data-mdb-ripple-init data-mdb-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="client-modal-inp d-flex flex-column">
+              <input type="email" class="inputs" placeholder="Client Email" value="nkidman@example.com" name="" id="" />
+              <input type="password" class="inputs" placeholder="Create Password" name="" value="123213213" id="" />
 
-    <!-- MDB -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"
-    ></script>
-    <script src="script.js"></script>
-  </body>
+              <button class="custom-btn dark">Update Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- =============================== -->
+
+    <!-- =================== DELETE MODAL =============== -->
+    <div id="myModal" class="modal-sec">
+      <!-- Modal content -->
+      <div class="modal-content d-flex justify-content-center align-items-center flex-column">
+        <div class="w-100 modal-head">
+          <p>Delete Login?</p>
+        </div>
+        <div class="modal-cont d-flex justify-content-center align-items-center flex-column">
+          <p>Are you sure you want to delete this Login?</p>
+          <div class="modal-btns d-flex justify-content-center align-items-center">
+            <button class="mb-del" onclick="confirmDelete()">Yes</button>
+            <button class="mb-canc" onclick="closeModal()">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- =================== END DELETE MODAL =============== -->
+    <!-- ================================== -->
+  </div>
+
+  <!-- ================================================== -->
+  <!-- ==============   END MAIN CONTAINER   ============ -->
+  <!-- Button trigger modal -->
+
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>

@@ -1,292 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lusso Admin Panel</title>
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- MDB -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="phone.css" />
-  </head>
-  <body>
-    <aside id="sidebar">
-         <div class="cross-btn" onclick="crossBtn()">
-        <i class="fas fa-xmark"></i>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lusso Admin Panel</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="phone.css" />
+</head>
+
+<body>
+  <aside id="sidebar">
+    <div class="cross-btn" onclick="crossBtn()">
+      <i class="fas fa-xmark"></i>
+    </div>
+    <div class="container p-0">
+      <div class="site-logo">
+        <img src="asset/images/logo.png" alt="" />
       </div>
-      <div class="container p-0">
-        <div class="site-logo">
-          <img src="asset/images/logo.png" alt="" />
-        </div>
-        <div class="aside-menu">
-          <ul class="menu-ul">
-            <li
-              class="menu-item  d-flex justify-content-start align-items-center"
-            >
+      <div class="aside-menu">
+        <ul class="menu-ul">
+          <li class="menu-item  d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="index.html">
               <div class="menu-icon">
                 <img src="asset/images/deve-icon.svg" alt="" />
               </div>
-              <a class="menu-link" href="index.html">Developments</a>
-            </li>
-            <li
-              class="menu-item d-flex justify-content-start align-items-center"
-            >
+              Developments
+            </a>
+          </li>
+          <li class="menu-item d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="appartment.html">
               <div class="menu-icon">
                 <img src="asset/images/deve-icon.svg" alt="" />
               </div>
-              <a class="menu-link" href="appartment.html">Apartments</a>
-            </li>
-            <li
-              class="menu-item active d-flex justify-content-start align-items-center"
-            >
+              Apartments
+            </a>
+          </li>
+          <li class="menu-item active d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="Furnishing.html">
               <div class="menu-icon">
                 <img src="asset/images/furn-icon.svg" alt="" />
               </div>
-              <a class="menu-link" href="Furnishing.html">Furnishings</a>
-            </li>
-            <li
-              class="menu-item d-flex justify-content-start align-items-center"
-            >
+              Furnishings
+            </a>
+          </li>
+          <li class="menu-item d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="fabric.html">
               <div class="menu-icon">
                 <img src="asset/images/fbr-icon.svg" alt="" />
               </div>
-              <a class="menu-link" href="fabric.html">Fabrics</a>
-            </li>
-            <li
-              class="menu-item d-flex justify-content-start align-items-center"
-            >
+              Fabrics
+            </a>
+          </li>
+          <li class="menu-item d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="clients.html">
               <div class="menu-icon">
                 <img src="asset/images/client-icon.svg" alt="" />
               </div>
-              <a class="menu-link" href="clients.html">Clients</a>
-            </li>
-            <li
-              class="menu-item d-flex justify-content-start align-items-center"
-            >
+              Clients
+            </a>
+          </li>
+          <li class="menu-item d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="demoUser.html">
               <div class="menu-icon">
                 <img src="asset/images/client-icon.svg" alt="" />
               </div>
-              <a class="menu-link" href="demoUser.html">Demo Users</a>
-            </li>
-          </ul>
-        </div>
+              Demo Users
+            </a>
+          </li>
+        </ul>
       </div>
-    </aside>
+    </div>
+  </aside>
 
-    <!-- ================================================== -->
-    <!-- =================    MAIN CONTAINER   ============ -->
-    <div class="main-container container-fluid">
-      <div class="contianer-fluid">
-        <div class="header d-flex justify-content-between align-items-center">
-           <div class="toggle-btn" onclick="toggleSideNav()">
-            <div class="toggle-bar"></div>
-            <div class="toggle-bar"></div>
-            <div class="toggle-bar"></div>
+  <!-- ================================================== -->
+  <!-- =================    MAIN CONTAINER   ============ -->
+  <div class="main-container container-fluid">
+    <div class="contianer-fluid">
+      <div class="header d-flex justify-content-between align-items-center">
+        <div class="toggle-btn" onclick="toggleSideNav()">
+          <div class="toggle-bar"></div>
+          <div class="toggle-bar"></div>
+          <div class="toggle-bar"></div>
+        </div>
+        <div class="site-name">
+          <h3>Admin Panel</h3>
+        </div>
+        <div class="admin-info d-flex justify-content-centter align-items-center">
+          <p>Admin Name</p>
+          <div class="user-img">
+            <img src="asset/images/user-igm.png" alt="" />
           </div>
-          <div class="site-name">
-            <h3>Admin Panel</h3>
+        </div>
+      </div>
+    </div>
+    <!-- =-============================ -->
+    <div class="development-sec d-flex justify-content-between align-item-center">
+      <div class="deve-content">
+        <p>Furnishings</p>
+        <div class="dev-icon">
+          <img src="asset/images/furn-bg.png" alt="" />
+        </div>
+      </div>
+      <div class="dev-total d-flex justify-content-center align-items-end flex-column">
+        <p>Total Furnishing Packages:</p>
+        <h4>03</h4>
+      </div>
+    </div>
+    <!-- =============================== -->
+    <div class="dev-cards">
+      <div class="row d-flex furn-row">
+        <div class="col-xl-3 col-lg-4 furn-col">
+          <div class="dev-card">
+            <div class="dev-card-img">
+              <img class="w-100" src="asset/images/furn-card1.png" alt="" />
+            </div>
+            <div class="dev-card-content furn-card-content">
+              <h4>Designer Pack</h4>
+              <p>Address: North city garden road - ST302, Australia</p>
+            </div>
+            <div class="dev-card-buttons d-flex justify-content-end furn-card-buttons align-items-center">
+              <a type="button" class="custom-btn dark edit-btn" data-mdb-ripple-init data-mdb-modal-init
+                data-mdb-target="#exampleModal">Edit</a>
+              <a class="btn-delete" href="#" onclick="openModal()">Delete</a>
+            </div>
           </div>
-          <div
-            class="admin-info d-flex justify-content-centter align-items-center"
-          >
-            <p>Admin Name</p>
-            <div class="user-img">
-              <img src="asset/images/user-igm.png" alt="" />
+        </div>
+        <div class="col-xl-3 col-lg-4 furn-col">
+          <div class="dev-card">
+            <div class="dev-card-img">
+              <img class="w-100" src="asset/images/furn-card2.png" alt="" />
+            </div>
+            <div class="dev-card-content furn-card-content">
+              <h4>Dual Roller Blinds</h4>
+              <p>
+                Two roller blinds to every window - blockout blinds for
+                privacy paired with sunscreen blinds for light control.
+                Ultimate flexibility.
+              </p>
+            </div>
+            <div class="dev-card-buttons d-flex justify-content-end furn-card-buttons align-items-center">
+              <a type="button" class="custom-btn dark edit-btn" data-mdb-ripple-init data-mdb-modal-init
+                data-mdb-target="#exampleModal">Edit</a>
+              <a class="btn-delete" href="#" onclick="openModal()">Delete</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 furn-col">
+          <div class="dev-card">
+            <div class="dev-card-img">
+              <img class="w-100" src="asset/images/furn-card3.png" alt="" />
+            </div>
+            <div class="dev-card-content furn-card-content">
+              <h4>Single Roller Blinds</h4>
+              <p>
+                Single roller blinds to all windows provide privacy and light
+                control. Blockout to Bedroom and sunscreen blinds in living
+                areas.
+              </p>
+            </div>
+            <div class="dev-card-buttons d-flex justify-content-end furn-card-buttons align-items-center">
+              <a class="custom-btn dark edit-btn" data-mdb-ripple-init data-mdb-modal-init
+                data-mdb-target="#exampleModal">Edit</a>
+              <a class="btn-delete" href="#" onclick="openModal()">Delete</a>
             </div>
           </div>
         </div>
       </div>
-      <!-- =-============================ -->
-      <div
-        class="development-sec d-flex justify-content-between align-item-center"
-      >
-        <div class="deve-content">
-          <p>Furnishings</p>
-          <div class="dev-icon">
-            <img src="asset/images/furn-bg.png" alt="" />
-          </div>
-        </div>
-        <div
-          class="dev-total d-flex justify-content-center align-items-end flex-column"
-        >
-          <p>Total Furnishing Packages:</p>
-          <h4>03</h4>
-        </div>
-      </div>
-      <!-- =============================== -->
-      <div class="dev-cards">
-        <div class="row d-flex furn-row">
-          <div class="col-xl-3 col-lg-4 furn-col">
-            <div class="dev-card">
-              <div class="dev-card-img">
-                <img class="w-100" src="asset/images/furn-card1.png" alt="" />
-              </div>
-              <div class="dev-card-content furn-card-content">
-                <h4>Designer Pack</h4>
-                <p>Address: North city garden road - ST302, Australia</p>
-              </div>
-              <div
-                class="dev-card-buttons d-flex justify-content-end furn-card-buttons align-items-center"
-              >
-                <a class="btn-edit" href="#">Edit</a>
-                <a class="btn-delete" href="#" onclick="openModal()">Delete</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 furn-col">
-            <div class="dev-card">
-              <div class="dev-card-img">
-                <img class="w-100" src="asset/images/furn-card2.png" alt="" />
-              </div>
-              <div class="dev-card-content furn-card-content">
-                <h4>Dual Roller Blinds</h4>
-                <p>
-                  Two roller blinds to every window - blockout blinds for
-                  privacy paired with sunscreen blinds for light control.
-                  Ultimate flexibility.
-                </p>
-              </div>
-              <div
-                class="dev-card-buttons d-flex justify-content-end furn-card-buttons align-items-center"
-              >
-                <a class="btn-edit" href="#">Edit</a>
-                <a class="btn-delete" href="#" onclick="openModal()">Delete</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 furn-col">
-            <div class="dev-card">
-              <div class="dev-card-img">
-                <img class="w-100" src="asset/images/furn-card3.png" alt="" />
-              </div>
-              <div class="dev-card-content furn-card-content">
-                <h4>Single Roller Blinds</h4>
-                <p>
-                  Single roller blinds to all windows provide privacy and light
-                  control. Blockout to Bedroom and sunscreen blinds in living
-                  areas.
-                </p>
-              </div>
-              <div
-                class="dev-card-buttons d-flex justify-content-end furn-card-buttons align-items-center"
-              >
-                <a class="btn-edit" href="#">Edit</a>
-                <a class="btn-delete" href="#" onclick="openModal()">Delete</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="add-dev d-flex justify-content-center align-items-center">
-        <button
-          type="button"
-          class="custom-btn dark"
-          data-mdb-ripple-init
-          data-mdb-modal-init
-          data-mdb-target="#exampleModal"
-        >
-          Add Furnishing
-        </button>
-      </div>
-
-      <!-- =================== DELETE MODAL =============== -->
-      <div id="myModal" class="modal-sec">
-        <!-- Modal content -->
-        <div
-          class="modal-content d-flex justify-content-center align-items-center flex-column"
-        >
-          <div class="w-100 modal-head">
-            <p>Delete Furnishing?</p>
-          </div>
-          <div
-            class="modal-cont d-flex justify-content-center align-items-center flex-column"
-          >
-            <p>Are you sure you want to delete
-this Furnishing?</p>
-            <div
-              class="modal-btns d-flex justify-content-center align-items-center"
-            >
-              <button class="mb-del" onclick="confirmDelete()">Yes</button>
-              <button class="mb-canc" onclick="closeModal()">No</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- =================== END DELETE MODAL =============== -->
-      <!-- ================================== -->
+    </div>
+    <div class="add-dev d-flex justify-content-center align-items-center">
+      <button type="button" class="custom-btn dark" data-mdb-ripple-init data-mdb-modal-init
+        data-mdb-target="#exampleModal">
+        Add Furnishing
+      </button>
     </div>
 
-    <!-- ================================================== -->
-    <!-- ==============   END MAIN CONTAINER   ============ -->
-    <!-- Button trigger modal -->
-
-    <!-- Modal -->
-    <!-- Button trigger modal -->
-    
-
-    <!-- Modal -->
-    <div
-      class="modal  fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog add-furn-modal">
-        <div class="modal-content add-furn-content">
-          <div class="modal-header">
-            <h5 class="modal-title align-self-start" id="exampleModalLabel">Create Furnishing Package</h5>
-            <button
-              type="button"
-              class="btn-close af-close-btn"
-              data-mdb-ripple-init
-              data-mdb-dismiss="modal"
-              aria-label="Close"
-            ></button>
+    <!-- =================== DELETE MODAL =============== -->
+    <div id="myModal" class="modal-sec">
+      <!-- Modal content -->
+      <div class="modal-content d-flex justify-content-center align-items-center flex-column">
+        <div class="w-100 modal-head">
+          <p>Delete Furnishing?</p>
+        </div>
+        <div class="modal-cont d-flex justify-content-center align-items-center flex-column">
+          <p>Are you sure you want to delete
+            this Furnishing?</p>
+          <div class="modal-btns d-flex justify-content-center align-items-center">
+            <button class="mb-del" onclick="confirmDelete()">Yes</button>
+            <button class="mb-canc" onclick="closeModal()">No</button>
           </div>
-          <div class="modal-body">
-              <div class="row add-furn-row">
-           <form action=""></form>
+        </div>
+      </div>
+    </div>
+    <!-- =================== END DELETE MODAL =============== -->
+    <!-- ================================== -->
+  </div>
+
+  <!-- ================================================== -->
+  <!-- ==============   END MAIN CONTAINER   ============ -->
+  <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <!-- Button trigger modal -->
+
+
+  <!-- Modal -->
+  <div class="modal  fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog add-furn-modal">
+      <div class="modal-content add-furn-content">
+        <div class="modal-header">
+          <h5 class="modal-title align-self-start" id="exampleModalLabel">Create Furnishing Package</h5>
+          <button type="button" class="btn-close af-close-btn" data-mdb-ripple-init data-mdb-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row add-furn-row">
+            <form action=""></form>
             <div class="col-lg-8">
-                <div class="aprt-form furn-modal-form">
-                   
-                       <div class="aprt-form-inp af-furn-modal-inp">
-                         <label for="name">Furnishing Name</label>
-                         <input type="text" placeholder="Furnishing Name" value="Designer Pack">
-                       </div>
-                       <div class="aprt-form-inp af-furn-modal-inp">
-                         <label for="name">Furnishing Description</label>
-                         <textarea name="" placeholder="Furnishing Description" id="" cols="30" rows="3">Single Blockout Roller Blind paired wit sheer curtains. Ultimate flexibility with softer finish.</textarea>
-                       </div>
-                       <div class="aprt-form-btns d-flex justify-content-between align-items-center">
-                          <div class="aprt-form-save af-modal-save d-flex">
-                            <a class="aprt-form-cencel" href="#" type="button"
-              data-mdb-ripple-init
-              data-mdb-dismiss="modal">Cancel</a>
-                            <button onclick="showAlert()" class="af-save custom-btn dark"   type="button"  data-mdb-ripple-init>Save</button>
-                          </div>
-                          
-                         
-                       </div>
-                  
+              <div class="aprt-form furn-modal-form">
+
+                <div class="aprt-form-inp af-furn-modal-inp">
+                  <label for="name">Furnishing Name</label>
+                  <input type="text" placeholder="Furnishing Name" value="Designer Pack">
                 </div>
+                <div class="aprt-form-inp af-furn-modal-inp">
+                  <label for="name">Furnishing Description</label>
+                  <textarea name="" placeholder="Furnishing Description" id="" cols="30"
+                    rows="3">Single Blockout Roller Blind paired wit sheer curtains. Ultimate flexibility with softer finish.</textarea>
+                </div>
+                <div class="aprt-form-btns d-flex justify-content-between align-items-center">
+                  <div class="aprt-form-save af-modal-save d-flex">
+                    <a class="aprt-form-cencel" href="#" type="button" data-mdb-ripple-init
+                      data-mdb-dismiss="modal">Cancel</a>
+                    <button onclick="showAlert()" class="af-save custom-btn dark" type="button"
+                      data-mdb-ripple-init>Save</button>
+                  </div>
+
+
+                </div>
+
+              </div>
             </div>
             <div class="af-pos col-lg-4 p-0">
               <div class="af-file-inp af-modal-inp w-100">
-                <img class="w-100" src="asset/images/furn-modal.png" alt=""/>
+                <img class="w-100" src="asset/images/furn-modal.png" alt="" />
               </div>
               <div class="fi-label af-furn-label d-flex justify-content-center align-items-center">
                 <input type="file" id="file-input" style="display: none;">
@@ -295,19 +258,18 @@ this Furnishing?</p>
                 </label>
               </div>
             </div>
-            
-          </form>
-        </div>
-         
-        
+
+            </form>
+          </div>
+
+
         </div>
       </div>
     </div>
     <!-- MDB -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"
-    ></script>
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>

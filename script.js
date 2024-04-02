@@ -56,7 +56,7 @@ function showAlert() {
 document
   .getElementById("badge-input")
   .addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
+    if (e.key === " ") {
       createBadge(this.value);
       this.value = "";
     }
@@ -68,13 +68,15 @@ function createBadge(text) {
   var badgeContainer = document.createElement("span");
   badgeContainer.classList.add("badge");
 
-  var badgeText = document.createElement("span");
-  badgeText.textContent = text;
+  var badgeText = document.createElement("input"); // Change to input element
+  badgeText.setAttribute("type", "text");
+  badgeText.setAttribute("value", text);
+  badgeText.setAttribute("readonly", "readonly"); // Set as readonly
   badgeContainer.appendChild(badgeText);
 
   var closeButton = document.createElement("span");
   closeButton.classList.add("badge-close");
-  closeButton.textContent = "";
+  closeButton.textContent = "✖";
   closeButton.addEventListener("click", function () {
     badgeContainer.remove();
   });
