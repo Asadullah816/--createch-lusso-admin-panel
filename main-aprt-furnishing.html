@@ -161,7 +161,7 @@
                       <div class="col-5">
                         <div class="choose-fp-inp d-flex flex-column">
                           <label for="">Price in AUD</label>
-                          <input class="inputs" type="number" placeholder="9600.00" />
+                          <input class="inputs" type="number" min="0" placeholder="9600.00" />
                         </div>
                       </div>
                     </div>
@@ -193,12 +193,12 @@
                       <div class="col-4">
                         <div class="choose-fp-inp d-flex flex-column">
                           <label for="">Price in AUD</label>
-                          <input class="inputs" type="number" placeholder="3600.00" />
+                          <input class="inputs" type="number" min="0" placeholder="3600.00" />
                         </div>
                       </div>
                     </div>
                     <div class="row fdeal-curtains">
-                      <div class="col-5">
+                      <div class="col-md-5 col-sm-12">
                         <div class="choose-fp-inp d-flex flex-column">
                           <label for="">Curtains or Roller Blind?</label>
                           <select class="form-select selects inputs" name="" id="" aria-placeholder="Curtains">
@@ -208,21 +208,25 @@
                           </select>
                         </div>
                       </div>
-                      <div class="col-7">
+                      <div class="col-md-7 col-sm-12">
                         <div class="choose-fp-inp d-flex flex-column">
                           <label for="">Price in AUD</label>
                           <div class="fdeals-colors d-flex align-items-center">
                             <div class="fd-color">
-                              <p>White</p>
+                              <label for="color11">White</label>
+                              <input type="checkbox" class="color-checkbox" name="" id="color11" />
                             </div>
                             <div class="fd-color">
-                              <p>Snow</p>
+                              <label for="color22">Snow</label>
+                              <input type="checkbox" class="color-checkbox" name="" id="color22" />
                             </div>
                             <div class="fd-color">
-                              <p>Purple</p>
+                              <label for="color33">Purples</label>
+                              <input type="checkbox" class="color-checkbox" name="" id="color33" />
                             </div>
                             <div class="fd-color">
-                              <p>Black</p>
+                              <label for="color44">Black</label>
+                              <input type="checkbox" class="color-checkbox" name="" id="color44" />
                             </div>
                           </div>
                         </div>

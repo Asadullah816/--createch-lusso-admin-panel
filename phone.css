@@ -10,6 +10,11 @@
     display: none;
 }
 
+.fdeal-curtains {
+    display: flex;
+    flex-direction: row !important;
+}
+
 @media(max-width:1500px) {
     .develop-col {
         width: 33%;
@@ -366,6 +371,7 @@
     }
 
 }
+
 @media(max-width:424px) {
     .aprt-form-create button {
         padding: 10px 8px;

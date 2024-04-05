@@ -133,3 +133,6 @@ function closeSideNav() {
   sideNav.style.marginLeft = "-300";
   crossBar.style.display = "none";
 }
+
+
+

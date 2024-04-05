@@ -1,182 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lusso Admin Panel</title>
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- MDB -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../../index.css" />
-    <link rel="stylesheet" href="../../phone.css" />
-  </head>
 
-  <body>
-    <aside id="sidebar">
-      <div class="cross-btn" onclick="crossBtn()">
-        <i class="fas fa-xmark"></i>
-      </div>
-      <div class="container p-0">
-        <div class="site-logo">
-          <img src="../images/logo.png" alt="" />
-        </div>
-        <div class="aside-menu">
-          <ul class="menu-ul">
-            <li
-              class="menu-item d-flex justify-content-start align-items-center"
-            >
-              <a
-                class="menu-link d-flex justify-content-center align-items-center"
-                href="../../index.html"
-              >
-                <div class="menu-icon">
-                  <img src="../images/deve-icon.svg" alt="" />
-                </div>
-                Developments</a
-              >
-            </li>
-            <li
-              class="menu-item d-flex justify-content-start align-items-center"
-            >
-              <a
-                class="menu-link d-flex justify-content-center align-items-center"
-                href="../../appartment.html"
-              >
-                <div class="menu-icon">
-                  <img src="../images/deve-icon.svg" alt="" />
-                </div>
-                Apartments</a
-              >
-            </li>
-            <li
-              class="menu-item active d-flex justify-content-start align-items-center"
-            >
-              <a
-                class="menu-link d-flex justify-content-center align-items-center"
-                href="../../Furnishing.html"
-              >
-                <div class="menu-icon">
-                  <img src="../images/furn-icon.svg" alt="" />
-                </div>
-                Furnishings</a
-              >
-            </li>
-            <li
-              class="menu-item d-flex justify-content-start align-items-center"
-            >
-              <a
-                class="menu-link d-flex justify-content-center align-items-center"
-                href="../../fabric.html"
-              >
-                <div class="menu-icon">
-                  <img src="../images/fbr-icon.svg" alt="" />
-                </div>
-                Fabrics</a
-              >
-            </li>
-            <li
-              class="menu-item d-flex justify-content-start align-items-center"
-            >
-              <a
-                class="menu-link d-flex justify-content-center align-items-center"
-                href="../../clients.html"
-              >
-                <div class="menu-icon">
-                  <img src="../images/client-icon.svg" alt="" />
-                </div>
-                Clients</a
-              >
-            </li>
-            <li
-              class="menu-item d-flex justify-content-start align-items-center"
-            >
-              <a
-                class="menu-link d-flex justify-content-center align-items-center"
-                href="../../demoUser.html"
-              >
-                <div class="menu-icon">
-                  <img src="../images/client-icon.svg" alt="" />
-                </div>
-                Demo Users</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </aside>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lusso Admin Panel</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../index.css" />
+  <link rel="stylesheet" href="../../phone.css" />
+</head>
 
-    <!-- ================================================== -->
-    <!-- =================    MAIN CONTAINER   ============ -->
-    <div class="main-container container-fluid">
-      <!-- ======================= HEADER ====================== -->
-      <div class="contianer-fluid">
-        <div class="header d-flex justify-content-between align-items-center">
-          <div class="toggle-btn" onclick="toggleSideNav()">
-            <div class="toggle-bar"></div>
-            <div class="toggle-bar"></div>
-            <div class="toggle-bar"></div>
-          </div>
-          <div class="site-name">
-            <h3>Admin Panel</h3>
-          </div>
-          <div
-            class="admin-info d-flex justify-content-centter align-items-center"
-          >
-            <p>Admin Name</p>
-            <div class="user-img">
-              <img src="../images/user-igm.png" alt="" />
-            </div>
+<body>
+  <aside id="sidebar">
+    <div class="cross-btn" onclick="crossBtn()">
+      <i class="fas fa-xmark"></i>
+    </div>
+    <div class="container p-0">
+      <div class="site-logo">
+        <img src="../images/logo.png" alt="" />
+      </div>
+      <div class="aside-menu">
+        <ul class="menu-ul">
+          <li class="menu-item d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="../../index.html">
+              <div class="menu-icon">
+                <img src="../images/deve-icon.svg" alt="" />
+              </div>
+              Developments
+            </a>
+          </li>
+          <li class="menu-item d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="../../appartment.html">
+              <div class="menu-icon">
+                <img src="../images/deve-icon.svg" alt="" />
+              </div>
+              Apartments
+            </a>
+          </li>
+          <li class="menu-item active d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="../../Furnishing.html">
+              <div class="menu-icon">
+                <img src="../images/furn-icon.svg" alt="" />
+              </div>
+              Furnishings
+            </a>
+          </li>
+          <li class="menu-item d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="../../fabric.html">
+              <div class="menu-icon">
+                <img src="../images/fbr-icon.svg" alt="" />
+              </div>
+              Fabrics
+            </a>
+          </li>
+          <li class="menu-item d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="../../clients.html">
+              <div class="menu-icon">
+                <img src="../images/client-icon.svg" alt="" />
+              </div>
+              Clients
+            </a>
+          </li>
+          <li class="menu-item d-flex justify-content-start align-items-center">
+            <a class="menu-link d-flex justify-content-center align-items-center" href="../../demoUser.html">
+              <div class="menu-icon">
+                <img src="../images/client-icon.svg" alt="" />
+              </div>
+              Demo Users
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================================================== -->
+  <!-- =================    MAIN CONTAINER   ============ -->
+  <div class="main-container container-fluid">
+    <!-- ======================= HEADER ====================== -->
+    <div class="contianer-fluid">
+      <div class="header d-flex justify-content-between align-items-center">
+        <div class="toggle-btn" onclick="toggleSideNav()">
+          <div class="toggle-bar"></div>
+          <div class="toggle-bar"></div>
+          <div class="toggle-bar"></div>
+        </div>
+        <div class="site-name">
+          <h3>Admin Panel</h3>
+        </div>
+        <div class="admin-info d-flex justify-content-centter align-items-center">
+          <p>Admin Name</p>
+          <div class="user-img">
+            <img src="../images/user-igm.png" alt="" />
           </div>
         </div>
       </div>
-      <!-- =-===================== END HEADER ==================== -->
-      <!-- ====================================================== -->
+    </div>
+    <!-- =-===================== END HEADER ==================== -->
+    <!-- ====================================================== -->
 
-      <!-- ================ MAIN CONTENT ========================== -->
-      <div class="apf-container">
+    <!-- ================ MAIN CONTENT ========================== -->
+    <div class="apf-container">
+      <form action="">
         <div class="apf-info">
           <div class="row">
             <div class="col-md-6 col-sm-12">
-              <div
-                class="apf-info-div d-flex justify-content-start align-items-start flex-column"
-              >
+              <div class="apf-info-div d-flex justify-content-start align-items-start flex-column">
                 <span>Development Name:</span>
                 <p>Serene Life Residences</p>
                 <div class="apf-inp apf-inp2 d-flex flex-column w-100">
                   <label for="">Client Name</label>
-                  <input
-                    type="text"
-                    placeholder="Client Name"
-                    value="Nicole Kidman"
-                  />
+                  <input type="text" placeholder="Client Name" value="Nicole Kidman" />
                 </div>
               </div>
             </div>
             <div class="col-md-6 col-sm-12 ps-3">
-              <div
-                class="apf-info-div d-flex justify-content-start align-items-start flex-column"
-              >
+              <div class="apf-info-div d-flex justify-content-start align-items-start flex-column">
                 <span>Apartment Number:</span>
                 <p>B - 70</p>
                 <div class="apf-inp apf-inp2 d-flex flex-column w-100">
                   <label for="">Client Email</label>
-                  <input
-                    type="text"
-                    placeholder="Client Name"
-                    value="nkidman@example.com"
-                  />
+                  <input type="text" placeholder="Client Name" value="nkidman@example.com" />
                 </div>
               </div>
             </div>
@@ -188,35 +137,20 @@
             <div class="accordion d-flex flex-column" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
-                  <button
-                    data-mdb-collapse-init
-                    class="accordion-button"
-                    type="button"
-                    data-mdb-toggle="collapse"
-                    data-mdb-target="#collapseOne"
-                    aria-expanded="true"
-                    aria-controls="collapseOne"
-                  >
+                  <button data-mdb-collapse-init class="accordion-button" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Furnishing 1
                   </button>
                 </h2>
-                <div
-                  id="collapseOne"
-                  class="accordion-collapse collapse show"
-                  aria-labelledby="headingOne"
-                  data-mdb-parent="#accordionExample"
-                >
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                  data-mdb-parent="#accordionExample">
                   <div class="accordion-body d-flex flex-column">
                     <div class="choose-fp">
                       <div class="row">
                         <div class="col-md-7 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Choose Furnishing Package</label>
-                            <select
-                              class="form-select selects inputs"
-                              name=""
-                              id=""
-                            >
+                            <select class="form-select selects inputs" name="" id="">
                               <option selected value="Designer Pack">
                                 Designer Pack
                               </option>
@@ -228,18 +162,12 @@
                         <div class="col-md-5 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Price in AUD</label>
-                            <input
-                              class="inputs"
-                              type="number"
-                              value="9600.00"
-                            />
+                            <input class="inputs" type="number" min="0" value="9600.00" />
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div
-                      class="apf-space-head d-flex justify-content-between align-items-center choose-head"
-                    >
+                    <div class="apf-space-head d-flex justify-content-between align-items-center choose-head">
                       <div class="apf-space-name d-flex align-item-center">
                         <img src="../images/furn-icon.svg" alt="" />
                         <p class="ps-3">Add Fabric Deals to this furnishing</p>
@@ -253,11 +181,7 @@
                         <div class="col-md-8 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Deal Name</label>
-                            <select
-                              class="form-select selects inputs"
-                              name=""
-                              id=""
-                            >
+                            <select class="form-select selects inputs" name="" id="">
                               <option selected value="Designer Pack">
                                 Premium Fabric
                               </option>
@@ -269,11 +193,7 @@
                         <div class="col-md-4 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Price in AUD</label>
-                            <input
-                              class="inputs"
-                              type="number"
-                              value="3200.00"
-                            />
+                            <input class="inputs" min="0" type="number" value="3200.00" />
                           </div>
                         </div>
                       </div>
@@ -281,11 +201,7 @@
                         <div class="col-md-5 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Curtains or Roller Blind?</label>
-                            <select
-                              class="form-select selects inputs"
-                              name=""
-                              id=""
-                            >
+                            <select class="form-select selects inputs" name="" id="">
                               <option selected value="Designer Pack">
                                 Curtains
                               </option>
@@ -294,47 +210,25 @@
                             </select>
                           </div>
                         </div>
-                        <div class="col--md-7 col-sm-12">
+                        <div class="col-md-7 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Price in AUD</label>
-                            <div
-                              class="fdeals-colors d-flex align-items-center"
-                            >
+                            <div class="fdeals-colors d-flex align-items-center">
                               <div class="fd-color">
                                 <label for="color01">White</label>
-                                <input
-                                  type="checkbox"
-                                  class="color-checkbox"
-                                  name=""
-                                  id="color01"
-                                />
+                                <input type="checkbox" class="color-checkbox" name="" id="color01" />
                               </div>
                               <div class="fd-color">
                                 <label for="color02">Snow</label>
-                                <input
-                                  type="checkbox"
-                                  class="color-checkbox"
-                                  name=""
-                                  id="color02"
-                                />
+                                <input type="checkbox" class="color-checkbox" name="" id="color02" />
                               </div>
                               <div class="fd-color">
                                 <label for="color03">Purples</label>
-                                <input
-                                  type="checkbox"
-                                  class="color-checkbox"
-                                  name=""
-                                  id="color03"
-                                />
+                                <input type="checkbox" class="color-checkbox" name="" id="color03" />
                               </div>
                               <div class="fd-color">
                                 <label for="color04">Black</label>
-                                <input
-                                  type="checkbox"
-                                  class="color-checkbox"
-                                  name=""
-                                  id="color04"
-                                />
+                                <input type="checkbox" class="color-checkbox" name="" id="color04" />
                               </div>
                             </div>
                           </div>
@@ -346,11 +240,7 @@
                         <div class="col-md-8 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Deal Name</label>
-                            <select
-                              class="form-select selects inputs"
-                              name=""
-                              id=""
-                            >
+                            <select class="form-select selects inputs" name="" id="">
                               <option selected value="Designer Pack">
                                 Premium Fabric
                               </option>
@@ -362,11 +252,7 @@
                         <div class="col-md-4 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Price in AUD</label>
-                            <input
-                              class="inputs"
-                              type="number"
-                              placeholder="3600.00"
-                            />
+                            <input class="inputs" type="number" min="0" placeholder="3600.00" />
                           </div>
                         </div>
                       </div>
@@ -374,12 +260,7 @@
                         <div class="col-md-5 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Curtains or Roller Blind?</label>
-                            <select
-                              class="form-select selects inputs"
-                              name=""
-                              id=""
-                              aria-placeholder="Curtains"
-                            >
+                            <select class="form-select selects inputs" name="" id="" aria-placeholder="Curtains">
                               <option value="Designer Pack">Curtains</option>
                               <option value="">Curtains</option>
                               <option value="">Curtains</option>
@@ -389,46 +270,22 @@
                         <div class="col-md-7 col-sm-12">
                           <div class="choose-fp-inp d-flex flex-column">
                             <label for="">Price in AUD</label>
-                            <div
-                              class="fdeals-colors d-flex align-items-center"
-                            >
+                            <div class="fdeals-colors d-flex align-items-center">
                               <div class="fd-color">
                                 <label for="color1">White</label>
-                                <input
-                                  id="color1"
-                                  type="checkbox"
-                                  class="color-checkbox"
-                                  name=""
-                                  id=""
-                                />
+                                <input id="color1" type="checkbox" class="color-checkbox" name="" id="" />
                               </div>
                               <div class="fd-color">
                                 <label for="color2">Snow</label>
-                                <input
-                                  itemid="color2"
-                                  type="checkbox"
-                                  class="color-checkbox"
-                                  name=""
-                                  id="color2"
-                                />
+                                <input itemid="color2" type="checkbox" class="color-checkbox" name="" id="color2" />
                               </div>
                               <div class="fd-color">
                                 <label for="color3">Purples</label>
-                                <input
-                                  type="checkbox"
-                                  class="color-checkbox"
-                                  name=""
-                                  id="color3"
-                                />
+                                <input type="checkbox" class="color-checkbox" name="" id="color3" />
                               </div>
                               <div class="fd-color">
                                 <label for="color4">Black</label>
-                                <input
-                                  type="checkbox"
-                                  class="color-checkbox"
-                                  name=""
-                                  id="color4"
-                                />
+                                <input type="checkbox" class="color-checkbox" name="" id="color4" />
                               </div>
                             </div>
                           </div>
@@ -443,150 +300,141 @@
               </div>
             </div>
 
-            <div
-              class="apf-last-btns d-flex justify-content-center align-items-center flex-column"
-            >
+            <div class="apf-last-btns d-flex justify-content-center align-items-center flex-column">
               <button class="custom-btn add-another-furn">
                 Add Another Furnishing
               </button>
-              <a
-                href="addMotarization.html"
-                type="submit"
-                class="custom-btn continue"
-                >Continue to Motorisation</a
-              >
-              <a href="addAprtFurn.html" class="back custom-btn" type="sumbit"
-                >Back</a
-              >
+              <button type="submit" class="custom-btn continue">Continue to Motorisation</button>
+              <!-- <a href="addMotarization.html" type="submit" class="custom-btn continue">Continue to Motorisation</a> -->
+              <a href="addAprtFurn.html" class="back custom-btn" type="sumbit">Back</a>
             </div>
           </div>
         </div>
-      </div>
-      <!-- ======================================================== -->
-
-      <!-- ================================================== -->
-      <!-- ==============   END MAIN CONTAINER   ============ -->
+      </form>
     </div>
-    <!-- MDB -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"
-    ></script>
+    <!-- ======================================================== -->
 
-    <script src="../../script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- ================================================== -->
+    <!-- ==============   END MAIN CONTAINER   ============ -->
+  </div>
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var addButton = document.querySelector(".add-another-space");
+  <script src="../../script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        addButton.addEventListener("click", function () {
-          var contentToAppend = document
-            .querySelector(".apf-clone .apf-bed-sec")
-            .cloneNode(true);
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var addButton = document.querySelector(".add-another-space");
 
-          document.querySelector(".apf-clone").appendChild(contentToAppend);
-        });
+      addButton.addEventListener("click", function () {
+        var contentToAppend = document
+          .querySelector(".apf-clone .apf-bed-sec")
+          .cloneNode(true);
+
+        document.querySelector(".apf-clone").appendChild(contentToAppend);
       });
-      // Select all elements with the class '.fd-color'
-      // Select all checkboxes with the class 'fd-checkbox'
-      let fdCheckboxes = document.querySelectorAll(".color-checkbox");
-      let fdeal = document.querySelectorAll(".fdeals-colors");
-      // Loop through each checkbox and add a change event listener
-      fdCheckboxes.forEach(function (checkbox) {
-        checkbox.addEventListener("change", function () {
-          // Toggle the class 'color-active' on the parent element when the checkbox is checked or unchecked
-          if (this.checked) {
-            this.parentNode.classList.add("color-active");
-          } else {
-            this.parentNode.classList.remove("color-active");
+    });
+    // Select all elements with the class '.fd-color'
+    // Select all checkboxes with the class 'fd-checkbox'
+    let fdCheckboxes = document.querySelectorAll(".color-checkbox");
+    let fdeal = document.querySelectorAll(".fdeals-colors");
+    // Loop through each checkbox and add a change event listener
+    fdCheckboxes.forEach(function (checkbox) {
+      checkbox.addEventListener("change", function () {
+        // Toggle the class 'color-active' on the parent element when the checkbox is checked or unchecked
+        if (this.checked) {
+          this.parentNode.classList.add("color-active");
+        } else {
+          this.parentNode.classList.remove("color-active");
+        }
+      });
+    });
+
+    <!-- ============================================  Add another Deal ======================= -->
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var addButton = document.querySelector(".add-another-furn");
+
+      addButton.addEventListener("click", function () {
+        var accordionItem = document.querySelector(".accordion-item");
+        var contentToAppend = accordionItem.cloneNode(true);
+
+        // Generate unique IDs for the cloned accordion item and its collapse element
+        var newId =
+          "collapse" +
+          (document.querySelectorAll(".accordion-item").length + 1);
+        var newHeadingId =
+          "heading" +
+          (document.querySelectorAll(".accordion-item").length + 1);
+
+        // Update IDs and attributes of the cloned elements
+        contentToAppend.querySelector(".accordion-collapse").id = newId;
+        contentToAppend
+          .querySelector(".accordion-button")
+          .setAttribute("data-mdb-target", "#" + newId);
+        contentToAppend
+          .querySelector(".accordion-button")
+          .setAttribute("aria-controls", newId);
+        contentToAppend.querySelector(".accordion-header").id = newHeadingId;
+        contentToAppend
+          .querySelector(".accordion-button")
+          .setAttribute("aria-labelledby", newHeadingId);
+
+        document.querySelector(".accordion").appendChild(contentToAppend);
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var addButton = document.querySelector(".add-another-deal");
+
+      addButton.addEventListener("click", function () {
+        var contentToAppend = document
+          .querySelector(".deal-clone")
+          .cloneNode(true);
+
+        // Generate a unique ID for the cloned deal
+        var uniqueId = "deal-" + Math.random().toString(36).substr(2, 9);
+
+        // Update IDs of checkboxes and associated labels inside the cloned deal
+        var checkboxes = contentToAppend.querySelectorAll(".color-checkbox");
+        checkboxes.forEach(function (checkbox) {
+          var originalId = checkbox.getAttribute("id");
+          var newId = originalId + "-" + uniqueId;
+          checkbox.setAttribute("id", newId);
+
+          // Update label's 'for' attribute to match new checkbox ID
+          var label = contentToAppend.querySelector(
+            'label[for="' + originalId + '"]'
+          );
+          if (label) {
+            label.setAttribute("for", newId);
           }
         });
-      });
 
-      <!-- ============================================  Add another Deal ======================= -->
-
-      document.addEventListener("DOMContentLoaded", function () {
-        var addButton = document.querySelector(".add-another-furn");
-
-        addButton.addEventListener("click", function () {
-          var accordionItem = document.querySelector(".accordion-item");
-          var contentToAppend = accordionItem.cloneNode(true);
-
-          // Generate unique IDs for the cloned accordion item and its collapse element
-          var newId =
-            "collapse" +
-            (document.querySelectorAll(".accordion-item").length + 1);
-          var newHeadingId =
-            "heading" +
-            (document.querySelectorAll(".accordion-item").length + 1);
-
-          // Update IDs and attributes of the cloned elements
-          contentToAppend.querySelector(".accordion-collapse").id = newId;
-          contentToAppend
-            .querySelector(".accordion-button")
-            .setAttribute("data-mdb-target", "#" + newId);
-          contentToAppend
-            .querySelector(".accordion-button")
-            .setAttribute("aria-controls", newId);
-          contentToAppend.querySelector(".accordion-header").id = newHeadingId;
-          contentToAppend
-            .querySelector(".accordion-button")
-            .setAttribute("aria-labelledby", newHeadingId);
-
-          document.querySelector(".accordion").appendChild(contentToAppend);
-        });
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        var addButton = document.querySelector(".add-another-deal");
-
-        addButton.addEventListener("click", function () {
-          var contentToAppend = document
-            .querySelector(".deal-clone")
-            .cloneNode(true);
-
-          // Generate a unique ID for the cloned deal
-          var uniqueId = "deal-" + Math.random().toString(36).substr(2, 9);
-
-          // Update IDs of checkboxes and associated labels inside the cloned deal
-          var checkboxes = contentToAppend.querySelectorAll(".color-checkbox");
-          checkboxes.forEach(function (checkbox) {
-            var originalId = checkbox.getAttribute("id");
-            var newId = originalId + "-" + uniqueId;
-            checkbox.setAttribute("id", newId);
-
-            // Update label's 'for' attribute to match new checkbox ID
-            var label = contentToAppend.querySelector(
-              'label[for="' + originalId + '"]'
-            );
-            if (label) {
-              label.setAttribute("for", newId);
+        // Add event listeners to the checkboxes in the cloned deal
+        // Add event listeners to the checkboxes in the cloned deal
+        checkboxes.forEach(function (checkbox) {
+          checkbox.addEventListener("change", function () {
+            if (this.checked) {
+              this.parentNode.classList.add("color-active");
+            } else {
+              this.parentNode.classList.remove("color-active");
             }
           });
-
-          // Add event listeners to the checkboxes in the cloned deal
-          // Add event listeners to the checkboxes in the cloned deal
-          checkboxes.forEach(function (checkbox) {
-            checkbox.addEventListener("change", function () {
-              if (this.checked) {
-                this.parentNode.classList.add("color-active");
-              } else {
-                this.parentNode.classList.remove("color-active");
-              }
-            });
-          });
-
-          document
-            .querySelector(".accordion-body")
-            .appendChild(contentToAppend);
         });
-      });
-      // ==============================================================================
 
-      //++++++++++++++++++++++++++++++++++++++++++++++++++++
-      //++++++++++++++++++++++++++++++++++++++++++++++++++++
-      //++++++++++++++++++++++++++++++++++++++++++++++++++++
-    </script>
-  </body>
+        document
+          .querySelector(".accordion-body")
+          .appendChild(contentToAppend);
+      });
+    });
+    // ==============================================================================
+
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++
+  </script>
+</body>
+
 </html>
