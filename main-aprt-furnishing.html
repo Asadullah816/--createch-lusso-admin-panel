@@ -96,7 +96,7 @@
         <div class="admin-info d-flex justify-content-centter align-items-center">
           <p>Admin Name</p>
           <div class="user-img">
-            <img src="../images/user-igm.png" alt="" />
+            <img src="asset/images/user-igm.png" alt="" />
           </div>
         </div>
       </div>
@@ -273,6 +273,10 @@
     //================================================================
     //================================================================
     // Function to append the fdeals-inp component to the accordion body with incremented IDs
+    //================================================================
+    //================================================================
+    //================================================================
+    // Function to append the fdeals-inp component to the accordion body with incremented IDs
     function appendFdealsInpComponent() {
       // Count the number of existing fdeal-inp components
       var childNumber = $(".fdeals-inp").length + 1;
@@ -346,13 +350,7 @@
     //================================
     // Event delegation for dynamically added checkboxes
     // Event delegation for dynamically added checkboxes
-    $(document).on("change", ".color-checkbox", function () {
-      if (this.checked) {
-        $(this).closest('.fd-color').addClass("color-active");
-      } else {
-        $(this).closest('.fd-color').removeClass("color-active");
-      }
-    });
+
     //===============================================================================================
     //===============================================================================================
     //===============================================================================================
@@ -405,7 +403,7 @@
             </div>
           </div>
 
-          <div class="fdeals-inp deal-clone">
+          <div class="fdeals-inp ">
             <div class="row">
               <div class="col-md-8 col-sm-12">
                 <div class="choose-fp-inp d-flex flex-column">
@@ -490,11 +488,6 @@
         $(this).closest('.fd-color').removeClass("color-active");
       }
     });
-
-
-
-
-
   </script>
 </body>
 
