@@ -178,7 +178,7 @@
 
                   <div class="fdeals-inp deal-clone">
                     <div class="row">
-                      <div class="col-8">
+                      <div class="col-md-8 col-sm-12">
                         <div class="choose-fp-inp d-flex flex-column">
                           <label for="">Deal Name</label>
                           <select class="form-select selects inputs" name="" id="">
@@ -190,7 +190,7 @@
                           </select>
                         </div>
                       </div>
-                      <div class="col-4">
+                      <div class="col-md-4 col-sm-12">
                         <div class="choose-fp-inp d-flex flex-column">
                           <label for="">Price in AUD</label>
                           <input class="inputs" type="number" min="0" placeholder="3600.00" />
@@ -213,20 +213,20 @@
                           <label for="">Price in AUD</label>
                           <div class="fdeals-colors d-flex align-items-center">
                             <div class="fd-color">
-                              <label for="color11">White</label>
-                              <input type="checkbox" class="color-checkbox" name="" id="color11" />
+                              <label for="color1">White</label>
+                              <input id="color1" type="checkbox" class="color-checkbox" name="" id="" />
                             </div>
                             <div class="fd-color">
-                              <label for="color22">Snow</label>
-                              <input type="checkbox" class="color-checkbox" name="" id="color22" />
+                              <label for="color2">Snow</label>
+                              <input itemid="color2" type="checkbox" class="color-checkbox" name="" id="color2" />
                             </div>
                             <div class="fd-color">
-                              <label for="color33">Purples</label>
-                              <input type="checkbox" class="color-checkbox" name="" id="color33" />
+                              <label for="color3">Purples</label>
+                              <input type="checkbox" class="color-checkbox" name="" id="color3" />
                             </div>
                             <div class="fd-color">
-                              <label for="color44">Black</label>
-                              <input type="checkbox" class="color-checkbox" name="" id="color44" />
+                              <label for="color4">Black</label>
+                              <input type="checkbox" class="color-checkbox" name="" id="color4" />
                             </div>
                           </div>
                         </div>
@@ -263,53 +263,238 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var addButton = document.querySelector(".add-another-space");
 
-      addButton.addEventListener("click", function () {
-        var contentToAppend = document
-          .querySelector(".apf-clone .apf-bed-sec")
-          .cloneNode(true);
-
-        document.querySelector(".apf-clone").appendChild(contentToAppend);
-      });
-    });
-    // Select all elements with the class '.fd-color'
-    let fdColors = document.querySelectorAll(".fd-color");
-
-    // Loop through each element and add a click event listener
-    fdColors.forEach(function (fdColor) {
-      fdColor.addEventListener("click", function () {
-        // Toggle the class 'color-active' on the clicked element
-        this.classList.toggle("color-active");
-      });
-    });
 
     <!-- ============================================  Add another Deal ======================= -->
-    document.addEventListener("DOMContentLoaded", function () {
-      var addButton = document.querySelector(".add-another-deal");
 
-      addButton.addEventListener("click", function () {
-        var contentToAppend = document
-          .querySelector(".deal-clone")
-          .cloneNode(true);
 
-        document
-          .querySelector(".accordion-body")
-          .appendChild(contentToAppend);
-      });
+
+    //================================================================
+    //================================================================
+    //================================================================
+    // Function to append the fdeals-inp component to the accordion body with incremented IDs
+    function appendFdealsInpComponent() {
+      // Count the number of existing fdeal-inp components
+      var childNumber = $(".fdeals-inp").length + 1;
+
+      var fdealsInpComponent = `
+  <div class="fdeals-inp">
+    <div class="row">
+      <div class="col-md-8 col-sm-12">
+        <div class="choose-fp-inp d-flex flex-column">
+          <label for="">Deal Name</label>
+          <select class="form-select selects inputs" name="" id="deal-name-${childNumber}">
+            <option selected value="Designer Pack">Premium Fabric</option>
+            <option value="">Premium Fabric</option>
+            <option value="">Premium Fabric</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="choose-fp-inp d-flex flex-column">
+          <label for="">Price in AUD</label>
+          <input class="inputs" type="number" min="0" placeholder="3600.00" id="price-aud-${childNumber}" />
+        </div>
+      </div>
+    </div>
+    <div class="row fdeal-curtains">
+      <div class="col-md-5 col-sm-12">
+        <div class="choose-fp-inp d-flex flex-column">
+          <label for="">Curtains or Roller Blind?</label>
+          <select class="form-select selects inputs" name="" id="curtains-${childNumber}" aria-placeholder="Curtains">
+            <option value="Designer Pack">Curtains</option>
+            <option value="">Curtains</option>
+            <option value="">Curtains</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-7 col-sm-12">
+        <div class="choose-fp-inp d-flex flex-column">
+          <label for="">Price in AUD</label>
+          <div class="fdeals-colors d-flex align-items-center">
+            <div class="fd-color">
+              <label for="color1-${childNumber}">White</label>
+              <input id="color1-${childNumber}" type="checkbox" class="color-checkbox" name="" id="" />
+            </div>
+            <div class="fd-color">
+              <label for="color2-${childNumber}">Snow</label>
+              <input itemid="color2" type="checkbox" class="color-checkbox" name="" id="color2-${childNumber}" />
+            </div>
+            <div class="fd-color">
+              <label for="color3-${childNumber}">Purples</label>
+              <input type="checkbox" class="color-checkbox" name="" id="color3-${childNumber}" />
+            </div>
+            <div class="fd-color">
+              <label for="color4-${childNumber}">Black</label>
+              <input type="checkbox" class="color-checkbox" name="" id="color4-${childNumber}" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
+
+      // Append the fdeals-inp component to the accordion body
+      $(".accordion-body").append(fdealsInpComponent);
+    }
+
+    // Call the function to append the component when needed
+    $(".add-another-deal").on("click", function () {
+      appendFdealsInpComponent();
     });
-    document.addEventListener("DOMContentLoaded", function () {
-      var addButton = document.querySelector(".add-another-furn");
-
-      addButton.addEventListener("click", function () {
-        var contentToAppend = document
-          .querySelector(".accordion-item")
-          .cloneNode(true);
-
-        document.querySelector(".accordion").appendChild(contentToAppend);
-      });
+    //================================
+    // Event delegation for dynamically added checkboxes
+    // Event delegation for dynamically added checkboxes
+    $(document).on("change", ".color-checkbox", function () {
+      if (this.checked) {
+        $(this).closest('.fd-color').addClass("color-active");
+      } else {
+        $(this).closest('.fd-color').removeClass("color-active");
+      }
     });
+    //===============================================================================================
+    //===============================================================================================
+    //===============================================================================================
+    // Function to append the accordion item to the accordion container with incremented IDs
+    function appendAccordionItem() {
+      // Count the number of existing accordion items
+      var childNumber = $(".accordion-item").length + 1;
+
+      var accordionItem = `
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading${childNumber}">
+      <button data-mdb-collapse-init class="accordion-button" type="button" data-mdb-toggle="collapse"
+        data-mdb-target="#collapse${childNumber}" aria-expanded="true" aria-controls="collapse${childNumber}">
+        Furnishing ${childNumber}
+      </button>
+    </h2>
+    <div id="collapse${childNumber}" class="accordion-collapse collapse" aria-labelledby="heading${childNumber}"
+      data-mdb-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="accordion-body d-flex flex-column">
+          <div class="choose-fp">
+            <div class="row">
+              <div class="col-7">
+                <div class="choose-fp-inp d-flex flex-column">
+                  <label for="">Choose Furnishing Package</label>
+                  <select class="form-select selects inputs" name="" id="choose-fp-${childNumber}">
+                    <option selected value="Designer Pack">
+                      Designer Pack
+                    </option>
+                    <option value="">Designer Ano</option>
+                    <option value="">Designer Pack</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-5">
+                <div class="choose-fp-inp d-flex flex-column">
+                  <label for="">Price in AUD</label>
+                  <input class="inputs" type="number" min="0" placeholder="9600.00" id="price-aud-${childNumber}" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="apf-space-head d-flex justify-content-between align-items-center choose-head">
+            <div class="apf-space-name d-flex align-item-center">
+              <img src="../images/furn-icon.svg" alt="" />
+              <p class="ps-3">Add Fabric Deals to this furnishing</p>
+            </div>
+            <div class="apf-space-total">
+              <p>Total Spaces Added: 0</p>
+            </div>
+          </div>
+
+          <div class="fdeals-inp deal-clone">
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <div class="choose-fp-inp d-flex flex-column">
+                  <label for="">Deal Name</label>
+                  <select class="form-select selects inputs" name="" id="deal-name-${childNumber}">
+                    <option selected value="Designer Pack">
+                      Premium Fabric
+                    </option>
+                    <option value="">Premium Fabric</option>
+                    <option value="">Premium Fabric</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <div class="choose-fp-inp d-flex flex-column">
+                  <label for="">Price in AUD</label>
+                  <input class="inputs" type="number" min="0" placeholder="3600.00" id="deal-price-${childNumber}" />
+                </div>
+              </div>
+            </div>
+            <div class="row fdeal-curtains">
+              <div class="col-md-5 col-sm-12">
+                <div class="choose-fp-inp d-flex flex-column">
+                  <label for="">Curtains or Roller Blind?</label>
+                  <select class="form-select selects inputs" name="" id="curtains-${childNumber}"
+                    aria-placeholder="Curtains">
+                    <option value="Designer Pack">Curtains</option>
+                    <option value="">Curtains</option>
+                    <option value="">Curtains</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-7 col-sm-12">
+                <div class="choose-fp-inp d-flex flex-column">
+                  <label for="">Price in AUD</label>
+                  <div class="fdeals-colors d-flex align-items-center">
+                    <div class="fd-color">
+                      <label for="color1-${childNumber}">White</label>
+                      <input id="color1-${childNumber}" type="checkbox" class="color-checkbox" name="" />
+                    </div>
+                    <div class="fd-color">
+                      <label for="color2-${childNumber}">Snow</label>
+                      <input itemid="color2" type="checkbox" class="color-checkbox" name=""
+                        id="color2-${childNumber}" />
+                    </div>
+                    <div class="fd-color">
+                      <label for="color3-${childNumber}">Purples</label>
+                      <input type="checkbox" class="color-checkbox" name="" id="color3-${childNumber}" />
+                    </div>
+                    <div class="fd-color">
+                      <label for="color4-${childNumber}">Black</label>
+                      <input type="checkbox" class="color-checkbox" name="" id="color4-${childNumber}" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="add-another-deal align-self-center">
+          <p>[+] Add another Fabric Deal</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  `;
+
+      // Append the accordion item to the accordion container
+      $(".accordion").append(accordionItem);
+    }
+
+    // Call the function to append the accordion item when needed
+    $(".add-another-furn").on("click", function () {
+      appendAccordionItem();
+    });
+    // Event delegation for dynamically added checkboxes
+    $(document).on("change", ".color-checkbox", function () {
+      if (this.checked) {
+        $(this).closest('.fd-color').addClass("color-active");
+      } else {
+        $(this).closest('.fd-color').removeClass("color-active");
+      }
+    });
+
+
+
+
+
   </script>
 </body>
 
