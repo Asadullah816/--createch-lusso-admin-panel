@@ -53,31 +53,36 @@ function showAlert() {
 //   container.appendChild(badgeContainer);
 // }
 
-document
-  .getElementById("badge-input")
-  .addEventListener("keypress", function (e) {
-    if (e.key === " ") {
-      createBadge(this.value);
+// Add event listener to the badge input field
+// Add event listener to the badge input field
+document.getElementById("badge-input").addEventListener("keypress", function (e) {
+  if (e.key === " ") {
+    const inputValue = this.value.trim();
+    if (inputValue !== "") {
+      createBadge(inputValue);
       this.value = "";
     }
-  });
+  }
+});
 
+// Function to create a badge
 function createBadge(text) {
   if (!text) return;
 
   var badgeContainer = document.createElement("span");
   badgeContainer.classList.add("badge");
 
-  var badgeText = document.createElement("input"); // Change to input element
+  var badgeText = document.createElement("input");
   badgeText.setAttribute("type", "text");
   badgeText.setAttribute("value", text);
-  badgeText.setAttribute("readonly", "readonly"); // Set as readonly
+  badgeText.setAttribute("readonly", "readonly");
   badgeContainer.appendChild(badgeText);
 
   var closeButton = document.createElement("span");
   closeButton.classList.add("badge-close");
   closeButton.textContent = "✖";
   closeButton.addEventListener("click", function () {
+    // Remove the badge container when the close button is clicked
     badgeContainer.remove();
   });
 
@@ -89,6 +94,7 @@ function createBadge(text) {
     document.getElementById("badge-input")
   );
 }
+
 
 // ================================================================
 // ================================================================

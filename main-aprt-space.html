@@ -168,7 +168,7 @@
             </div>
           </div>
           <div class="apf-add-space">
-            <p class="add-another-space">[+] Add another space</p>
+            <p class="add-another-space" onclick="addNewSpace()">[+] Add another space</p>
           </div>
           <div class="apf-add-space-btn align-self-center">
             <a class="custom-btn bg-light-btn" href="#">Back</a>
@@ -187,17 +187,32 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
     <script src="script.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var addButton = document.querySelector(".add-another-space");
+      var newSpaceHTML = `
+  <div class="apf-main-content">
+    <div class="apf-bed-sec">
+      <div class="row apf-del-col">
+        <div class="col-6 apf-bed">
+          <input type="text" placeholder="Space Name" name="" id="" />
+        </div>
+        <div class="col-5 apf-bed">
+          <input type="number" placeholder="0" min="0" name="" id="" />
+        </div>
+        <div onclick="removeRow2(this)" class="col-1 apf-bed-btn d-flex justify-content-center align-items-center">
+          <a class=""><img src="asset/images/del.png" alt="" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+`;
 
-        addButton.addEventListener("click", function () {
-          var contentToAppend = document
-            .querySelector(".apf-clone .apf-bed-sec")
-            .cloneNode(true);
+      function addNewSpace() {
+        var mainContent = document.createElement('div');
+        mainContent.innerHTML = newSpaceHTML.trim();
 
-          document.querySelector(".apf-clone").appendChild(contentToAppend);
-        });
-      });
+        var addSpace = document.querySelector('.apf-add-space');
+        addSpace.parentNode.insertBefore(mainContent.firstChild, addSpace);
+      }
+
       function removeRow2(element) {
         var row = element.closest('.apf-del-col');
         row.parentNode.removeChild(row);

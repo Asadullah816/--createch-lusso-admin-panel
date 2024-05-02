@@ -503,16 +503,7 @@ table {
     border-top: 1px solid #51515156;
 }
 
-.save-alert {
-    display: none;
-    position: absolute;
-    top: 12%;
-    left: 45%;
-    padding: 5px 140px;
-    border-radius: 100px;
-    background: #B7F1D1;
-    color: var(--text-primary);
-}
+
 
 /* ============================================================== END ADDING APPARTMENT ========================================================== */
 .apf-container {
@@ -939,6 +930,8 @@ table {
     border-radius: 20px;
     margin-right: 5px;
     padding-right: 5px;
+    margin: 3px;
+    margin-top: 10px;
     display: inline-block;
 }
 
@@ -959,7 +952,7 @@ table {
     /* margin-left: px; */
     color: white;
     background-color: rgba(0, 0, 0, 0.548);
-    padding: 10px 15px;
+    padding: 10px 14px;
     border-radius: 100px;
     background-image: url('asset/images/crss.png');
     background-repeat: no-repeat;
@@ -1069,11 +1062,6 @@ table {
     display: inline-block;
 }
 
-/* .inputs {
-    border: ;
-    outline: none;
-    background: transparent;
-} */
 
 .badge-close {
     cursor: pointer;
@@ -1082,4 +1070,60 @@ table {
 
 .badge:empty {
     display: flex;
+}
+
+#preview-image {
+    max-width: 178px;
+    max-height: 178px;
+    border-radius: 10px;
+}
+
+.prev-img {
+    padding: 0px;
+    width: 178px;
+    height: 178px;
+    margin: 86px 0px 0px 10px;
+    width: 76%;
+    position: relative;
+    border: 1px solid #00000038;
+    border-radius: 10px;
+}
+
+#furn-prev-img {
+    border-radius: 15px;
+    width: 297.33px;
+    height: 252.78px;
+}
+
+#furn-prev-img1 {
+    border-radius: 15px;
+    width: 297.33px;
+    height: 252.78px;
+}
+
+.alert-span-success {
+    text-align: center;
+    background-color: red;
+}
+
+.save-alert {
+    position: absolute;
+    top: 12%;
+    left: 45%;
+    padding: 5px 140px;
+    border-radius: 100px;
+    background: #B7F1D1;
+    color: var(--text-primary);
+    animation-name: success-alert;
+    animation-duration: 1s;
+}
+
+@keyframes success-alert {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

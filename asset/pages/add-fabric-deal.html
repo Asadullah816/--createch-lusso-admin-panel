@@ -126,6 +126,15 @@
         <div class="afd-badge-inp d-flex flex-column">
           <label for="">Add Fabric Colors</label>
           <div class="badge-input-container">
+            <span class="badge"><input type="text" value="White" readonly="readonly"><span
+                class="badge-close">✖</span></span>
+            <span class="badge"><input type="text" value="Snow" readonly="readonly"><span
+                class="badge-close">✖</span></span>
+            <span class="badge"><input type="text" value="Purple" readonly="readonly"><span
+                class="badge-close">✖</span></span>
+            <span class="badge"><input type="text" value="Black" readonly="readonly"><span
+                class="badge-close">✖</span></span>
+
             <input class="inputs" type="text" id="badge-input" placeholder="Enter text" />
           </div>
         </div>
@@ -157,6 +166,20 @@ Premium Foam coated 'Avila ' blockout and 'Optimascreen Plus' sunscreen blinds f
 
   <script src="../../script.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    // Get all close buttons
+    const closeButtons = document.querySelectorAll('.badge-close');
+
+    // Attach click event listener to each close button
+    closeButtons.forEach(function (closeButton) {
+      closeButton.addEventListener('click', function () {
+        // Find the parent badge element and remove it
+        const badge = closeButton.parentNode;
+        badge.remove();
+      });
+    });
+
+  </script>
 </body>
 
 </html>

@@ -101,6 +101,9 @@
       </div>
     </div>
     <!-- =-============================ -->
+    <div class="alert save-alert d-none alert-success">
+      New furnishing package added successfully!
+    </div>
     <div class="development-sec d-flex justify-content-between align-item-center">
       <div class="deve-content">
         <p>Furnishings</p>
@@ -176,7 +179,7 @@
     </div>
     <div class="add-dev d-flex justify-content-center align-items-center">
       <button type="button" class="custom-btn dark" data-mdb-ripple-init data-mdb-modal-init
-        data-mdb-target="#exampleModal">
+        data-mdb-target="#exampleModal2">
         Add Furnishing
       </button>
     </div>
@@ -249,10 +252,10 @@
             </div>
             <div class="af-pos col-lg-4 p-0">
               <div class="af-file-inp af-modal-inp w-100">
-                <img class="w-100" src="asset/images/furn-modal.png" alt="" />
+                <img class="w-100" id="furn-prev-img" src="asset/images/furn-modal.png" alt="" />
               </div>
               <div class="fi-label af-furn-label d-flex justify-content-center align-items-center">
-                <input type="file" id="file-input" style="display: none;">
+                <input type="file" id="file-input" name="nothing" style="display: none;" onchange="displayImagefur()">
                 <label for="file-input">
                   <span class="file-span"><img class="w-100" src="asset/images/file-inp.png" alt=""></span>
                 </label>
@@ -266,10 +269,111 @@
         </div>
       </div>
     </div>
-    <!-- MDB -->
-    <script type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
-    <script src="script.js"></script>
+  </div>
+  <!-- Modal -->
+  <div class="modal  fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog add-furn-modal">
+      <div class="modal-content add-furn-content">
+        <div class="modal-header">
+          <h5 class="modal-title align-self-start" id="exampleModalLabel">Create Furnishing Package</h5>
+          <button type="button" class="btn-close af-close-btn" data-mdb-ripple-init data-mdb-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row add-furn-row">
+            <form action=""></form>
+            <div class="col-lg-8">
+              <div class="aprt-form furn-modal-form">
+
+                <div class="aprt-form-inp af-furn-modal-inp">
+                  <label for="name">Furnishing Name</label>
+                  <input type="text" placeholder="Furnishing Name" value="Designer Pack">
+                </div>
+                <div class="aprt-form-inp af-furn-modal-inp">
+                  <label for="name">Furnishing Description</label>
+                  <textarea name="" placeholder="Furnishing Description" id="" cols="30"
+                    rows="3">Single Blockout Roller Blind paired wit sheer curtains. Ultimate flexibility with softer finish.</textarea>
+                </div>
+                <div class="aprt-form-btns d-flex justify-content-between align-items-center">
+                  <div class="aprt-form-save af-modal-save d-flex">
+                    <a class="aprt-form-cencel" href="#" type="button" data-mdb-ripple-init
+                      data-mdb-dismiss="modal">Cancel</a>
+                    <button onclick="showAlert()" class="af-save custom-btn dark" type="button"
+                      data-mdb-ripple-init>Save</button>
+                  </div>
+
+
+                </div>
+
+              </div>
+            </div>
+            <div class="af-pos col-lg-4 p-0">
+              <div class="af-file-inp af-modal-inp w-100">
+                <img class="w-100" id="furn-prev-img1" src="asset/images/prev-img.png" alt="" />
+              </div>
+              <div class="fi-label af-furn-label d-flex justify-content-center align-items-center">
+                <input type="file" id="file-input2" onchange="furnImgFun()" style="display: none;" name="something">
+                <label for="file-input2">
+                  <span class="file-span"><img class="w-100" src="asset/images/file-inp.png" alt=""></span>
+                </label>
+              </div>
+            </div>
+
+            </form>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+
+
+    //document.getElementById("file-input2").onchange = function () { furnImgFun() };
+    //document.getElementById("file-input").onchange = function () { displayImagefur() };
+
+    function furnImgFun() {
+      console.log("Add furn")
+      const fileInput1 = document.getElementById('file-input2');
+      const previewImage1 = document.getElementById('furn-prev-img1');
+      const file1 = fileInput1.files[0];
+
+      if (file1) {
+        const reader1 = new FileReader();
+
+        reader1.onload = function (e) {
+          previewImage1.src = e.target.result;
+        };
+
+        reader1.readAsDataURL(file1);
+      } else {
+        previewImage1.src = '../images/file-inp.png';
+      }
+    }
+    function displayImagefur() {
+      console.log('sdfdsfasdfsafsa')
+      const fileInput = document.getElementById('file-input');
+      const previewImage = document.getElementById('furn-prev-img');
+      const file = fileInput.files[0];
+
+      if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          previewImage.src = e.target.result;
+        };
+
+        reader.readAsDataURL(file);
+      } else {
+        previewImage.src = '../images/file-inp.png';
+      }
+    }
+
+  </script>
 </body>
 
 </html>

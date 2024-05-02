@@ -124,7 +124,7 @@
                 <a class="aprt-form-cencel" href="#">Cancel</a>
                 <button type="submit" onclick="showAlert()" class="custom-btn dark">Save</button>
               </div>
-              <div class="alert save-alert alert-success" role="alert">
+              <div class="alert save-alert d-none alert-success" role="alert">
                 Apartment Edited Successfully!
               </div>
               <div class="aprt-form-create">
@@ -136,13 +136,13 @@
           </div>
         </div>
         <div class="af-pos col-lg-2 col-md-6 edit-aimg-col">
-          <div class="af-file-inp">
-            <img class="w-100" src="../images/file Img.png" alt="" />
+          <div class="af-file-inp prev-img">
+            <img class="w-100" id="preview-image" src="../images/file Img.png" alt="" />
           </div>
           <div class="fi-label d-flex justify-content-center align-items-center">
             <input type="file" id="file-input" style="display: none;" onchange="displayImage()">
             <label for="file-input">
-              <span class="file-span"><img id="preview-image" class="w-100" src="../images/file-inp.png" alt=""></span>
+              <span class="file-span"><img class="w-100" src="../images/file-inp.png" alt=""></span>
             </label>
           </div>
         </div>
