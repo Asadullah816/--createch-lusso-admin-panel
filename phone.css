@@ -70,6 +70,20 @@
     }
 }
 
+@media(max-width:1320px) {
+    .add-furn-modal {
+        margin: 100px 100px 100px 135px !important;
+    }
+
+    .modal-body {
+        padding: 15px 50px;
+    }
+
+    .site-logo {
+        padding: 10px 0px 19px 40px;
+    }
+}
+
 @media(max-width:1279px) {
     .develop-col {
         width: 49%;
@@ -82,6 +96,8 @@
     .aprt-form-create button {
         padding: 10px 15px;
     }
+
+
 
     /* .center-td {
         width: 32% !important;
@@ -122,6 +138,15 @@
     .modal-content {
         width: 40%;
     }
+
+    aside {
+        margin-left: 0;
+        transition: all .3s ease-in-out;
+    }
+
+
+
+
 
     /* .aprt-table{
         overflow: scroll;

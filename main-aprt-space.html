@@ -23,7 +23,9 @@
     </div>
     <div class="container p-0">
       <div class="site-logo">
-        <img src="asset/images/logo.png" alt="" />
+        <a href="index.html">
+          <img src="asset/images/logo.png" alt="" />
+        </a>
       </div>
       <div class="aside-menu">
         <ul class="menu-ul">
@@ -122,8 +124,7 @@
                 <p>B - 70</p>
                 <div class="apf-inp d-flex flex-column w-100">
                   <label for="">Client Email</label>
-                  <input class="inputs ps-0 border-0" type="text" placeholder="Client Name"
-                    value="nkidman@example.com" />
+                  <input type="text" placeholder="Client Name" value="nkidman@example.com" />
                 </div>
               </div>
             </div>
@@ -137,7 +138,7 @@
               <p class="ps-3">Add Windows</p>
             </div>
             <div class="apf-space-total">
-              <p>Total Spaces Added: 0</p>
+              <p>Total Spaces Added: <span class="total-spaces"></span></p>
             </div>
           </div>
           <div class="apf-main-head d-flex align-items-center">
@@ -160,8 +161,7 @@
                 <div class="col-5 apf-bed">
                   <input type="number" placeholder="0" min="0" name="" id="" />
                 </div>
-                <div onclick="removeRow2(this)"
-                  class="col-1 apf-bed-btn d-flex justify-content-center align-items-center">
+                <div class="col-1 apf-bed-btn d-flex justify-content-center align-items-center">
                   <a class=""><img src="asset/images/del.png" alt="" /></a>
                 </div>
               </div>
@@ -203,21 +203,30 @@
       </div>
     </div>
   </div>
-`;
-
+  `;
       function addNewSpace() {
         var mainContent = document.createElement('div');
         mainContent.innerHTML = newSpaceHTML.trim();
 
+
         var addSpace = document.querySelector('.apf-add-space');
         addSpace.parentNode.insertBefore(mainContent.firstChild, addSpace);
+        dataLength();
       }
 
       function removeRow2(element) {
         var row = element.closest('.apf-del-col');
         row.parentNode.removeChild(row);
-      }
 
+      }
+      function dataLength() {
+        let space = document.querySelector('.total-spaces');
+        let len = document.querySelectorAll('.apf-main-content');
+        let total = len.length;
+        space.innerHTML = total;
+        console.log(total);
+      }
+      dataLength();
     </script>
 </body>
 

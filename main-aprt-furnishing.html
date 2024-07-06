@@ -22,7 +22,9 @@
     </div>
     <div class="container p-0">
       <div class="site-logo">
-        <img src="asset/images/logo.png" alt="" />
+        <a href="index.html">
+          <img src="asset/images/logo.png" alt="" />
+        </a>
       </div>
       <div class="aside-menu">
         <ul class="menu-ul">
@@ -140,6 +142,7 @@
                   data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   Furnishing 1
                 </button>
+                <span class="acc-del"><img class="a-del-btn" src="asset/images/deletepw.svg" alt=""></span>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                 data-mdb-parent="#accordionExample">
@@ -190,11 +193,12 @@
                           </select>
                         </div>
                       </div>
-                      <div class="col-md-4 col-sm-12">
-                        <div class="choose-fp-inp d-flex flex-column">
+                      <div class="col-md-4 d-flex justify-content-between align-items-center col-sm-12">
+                        <div class="choose-fp-inp deal-del-inp d-flex flex-column">
                           <label for="">Price in AUD</label>
                           <input class="inputs" type="number" min="0" placeholder="3600.00" />
                         </div>
+                        <span class="del-deal" onclick=" dealDelete();"><img src="asset/images/del.png" alt=""></span>
                       </div>
                     </div>
                     <div class="row fdeal-curtains">
@@ -239,6 +243,7 @@
                 </div>
               </div>
             </div>
+
           </div>
 
           <div class="apf-last-btns d-flex justify-content-center align-items-center flex-column">
@@ -272,11 +277,36 @@
     //================================================================
     //================================================================
     //================================================================
-    // Function to append the fdeals-inp component to the accordion body with incremented IDs
+    function delAccordion() {
+      let acc = document.querySelectorAll('.accordion-item');
+      acc.forEach(function (data) {
+        let delData = data.querySelector('.acc-del');
+        delData.addEventListener('click', function (e) {
+          data.remove();
+        })
+      })
+    }
+
+
+    //=============================================
+    function dealDelete() {
+      let deal = document.querySelectorAll('.fdeals-inp');
+      deal.forEach(function (data) {
+        let delData = data.querySelector('.del-deal');
+        delData.addEventListener('click', function (e) {
+          data.remove();
+        })
+      })
+    }
+    setInterval(function () {
+      delAccordion();
+      ealDelete();
+    }, 1000)
     //================================================================
     //================================================================
     //================================================================
     // Function to append the fdeals-inp component to the accordion body with incremented IDs
+
     function appendFdealsInpComponent() {
       // Count the number of existing fdeal-inp components
       var childNumber = $(".fdeals-inp").length + 1;
@@ -294,11 +324,12 @@
           </select>
         </div>
       </div>
-      <div class="col-md-4 col-sm-12">
-        <div class="choose-fp-inp d-flex flex-column">
+      <div class="col-md-4 col-sm-12 d-flex justify-content-between align-items-center">
+        <div class="choose-fp-inp deal-del-inp d-flex flex-column">
           <label for="">Price in AUD</label>
           <input class="inputs" type="number" min="0" placeholder="3600.00" id="price-aud-${childNumber}" />
         </div>
+        <span class="del-deal" onclick=" dealDelete();"><img src="asset/images/del.png" alt=""></span>
       </div>
     </div>
     <div class="row fdeal-curtains">
@@ -338,23 +369,17 @@
     </div>
   </div>
   `;
-
-      // Append the fdeals-inp component to the accordion body
       $(".accordion-body").append(fdealsInpComponent);
     }
-
-    // Call the function to append the component when needed
     $(".add-another-deal").on("click", function () {
       appendFdealsInpComponent();
     });
     //================================
-    // Event delegation for dynamically added checkboxes
-    // Event delegation for dynamically added checkboxes
+
 
     //===============================================================================================
     //===============================================================================================
     //===============================================================================================
-    // Function to append the accordion item to the accordion container with incremented IDs
     function appendAccordionItem() {
       // Count the number of existing accordion items
       var childNumber = $(".accordion-item").length + 1;
@@ -366,6 +391,7 @@
         data-mdb-target="#collapse${childNumber}" aria-expanded="true" aria-controls="collapse${childNumber}">
         Furnishing ${childNumber}
       </button>
+      <span class="acc-del"><img class="a-del-btn" src="asset/images/deletepw.svg" alt=""></span>
     </h2>
     <div id="collapse${childNumber}" class="accordion-collapse collapse" aria-labelledby="heading${childNumber}"
       data-mdb-parent="#accordionExample">
@@ -417,11 +443,12 @@
                   </select>
                 </div>
               </div>
-              <div class="col-md-4 col-sm-12">
-                <div class="choose-fp-inp d-flex flex-column">
+              <div class="col-md-4 col-sm-12 d-flex justify-content-between align-items-center">
+                <div class="choose-fp-inp deal-del-inp d-flex flex-column">
                   <label for="">Price in AUD</label>
-                  <input class="inputs" type="number" min="0" placeholder="3600.00" id="deal-price-${childNumber}" />
+                  <input class="inputs" type="number" min="0" placeholder="3600.00" id="price-aud-${childNumber}" />
                 </div>
+                <span class="del-deal" onclick=" dealDelete();"><img src="asset/images/del.png" alt=""></span>
               </div>
             </div>
             <div class="row fdeal-curtains">
@@ -471,12 +498,9 @@
   </div>
 
   `;
-
-      // Append the accordion item to the accordion container
       $(".accordion").append(accordionItem);
     }
 
-    // Call the function to append the accordion item when needed
     $(".add-another-furn").on("click", function () {
       appendAccordionItem();
     });
